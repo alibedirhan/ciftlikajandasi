@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Çiftlik Ajandası — Offline sürü ajandası</title>
+  <meta name="description" content="Çiftlik Ajandası: Offline hayvan kayıtları, yaklaşan aşı/doğum hatırlatmaları ve şifreli yedekleme. Abonelik yok, kapasite modeli."/>
+  <meta name="theme-color" content="#1f3f34"/>
+  <link rel="icon" type="image/png" href="assets/img/app_icon.png"/>
+  <meta property="og:title" content="Çiftlik Ajandası"/>
+  <meta property="og:description" content="Offline çiftlik kayıtları, şifreli yedekleme ve güvenli geri yükleme."/>
+  <meta property="og:image" content="assets/img/hero_banner.png"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe atla</a>
+
+<header class="topbar">
+  <div class="wrap topbarInner">
+    <a class="brand" href="index.html" aria-label="Ana sayfa">
+      <img class="brandIcon" src="assets/img/app_icon.png" alt="" aria-hidden="true">
+      <div class="brandText">
+        <div class="brandName">Çiftlik Ajandası</div>
+        <div class="brandTag">Offline çiftlik kayıtları, yedekleme ve düzen.</div>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a class="navLink" href="#ozellikler">Özellikler</a>
+      <a class="navLink" href="#ekranlar">Ekranlar</a>
+      <a class="navLink" href="#paketler">Paketler</a>
+      <a class="navLink" href="#sss">SSS</a>
+      <a class="navLink" href="privacy.html">Gizlilik</a>
+      <a class="navLink" href="support.html" target="_blank" rel="noopener">Destek</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconBtn" id="themeBtn" type="button" aria-label="Tema değiştir">☾</button>
+      <button class="pill" id="playBtn" type="button" aria-disabled="true" title="Test aşamasında — link henüz yok">
+        Google Play (yakında)
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap heroGrid">
+      <div class="heroCopy">
+        <div class="badgeRow">
+          <span class="badge">Offline</span>
+          <span class="badge">Abonelik yok</span>
+          <span class="badge">Şifreli yedek</span>
+        </div>
+
+        <h1>Çiftlik kayıtlarını <span class="accent">tek yerde</span> topla.</h1>
+        <p class="lead">
+          Hayvan kayıtları, yaklaşan aşı/doğum, notlar ve hızlı işlemler.
+          İnternet şart değil — veriler cihazında.
+        </p>
+
+        <div class="heroCtas">
+          <button class="pill primary" type="button" id="playBtn2" aria-disabled="true">Google Play (yakında)</button>
+          <a class="pill" href="#paketler">Paketleri gör</a>
+          <a class="pill ghost" href="support.html" target="_blank" rel="noopener">Destek</a>
+        </div>
+
+        <div class="trust">
+          <div class="trustItem">
+            <div class="trustTitle">Veri cihazında</div>
+            <div class="trustSub">Sunucu yok • takip sende</div>
+          </div>
+          <div class="trustItem">
+            <div class="trustTitle">Güvenli yedek</div>
+            <div class="trustSub">Paylaş / kaydet / geri yükle</div>
+          </div>
+          <div class="trustItem">
+            <div class="trustTitle">Kapasite modeli</div>
+            <div class="trustSub">İhtiyacın kadar yükselt</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroMedia">
+        <div class="device">
+          <div class="deviceTop"></div>
+          <img class="deviceShot" src="assets/screenshots/full/hero.jpg" alt="Uygulama ekran görüntüsü" loading="eager" decoding="async">
+          <div class="deviceGlow" aria-hidden="true"></div>
+        <div class="deviceCaption">Gerçek uygulama ekranı.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="heroMascot" aria-hidden="true">
+      <canvas id="mascotCanvas" width="560" height="300"></canvas>
+    </div>
+  </section>
+
+  <section class="section" id="ozellikler">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2>Neden Çiftlik Ajandası?</h2>
+        <p>Kısa, net, işini yapan ajanda. Gösteriş değil; hız ve güven.</p>
+      </div>
+
+      <div class="cards3">
+        <article class="card">
+          <div class="cardIcon">📌</div>
+          <h3>Takip tek yerde</h3>
+          <p>Hayvan, tür, küpe, not, işlem… dağınıklık bitiyor.</p>
+        </article>
+        <article class="card">
+          <div class="cardIcon">🔒</div>
+          <h3>Şifreli yedek</h3>
+          <p>Yedek dosyanı paylaş, kaydet; geri yüklemede güvenli kapanış.</p>
+        </article>
+        <article class="card">
+          <div class="cardIcon">⚡</div>
+          <h3>Hızlı & stabil</h3>
+          <p>Büyük listelerde bile akıcı. Gereksiz ekran yok.</p>
+        </article>
+      </div>
+
+      <div class="cards3 compact">
+        <article class="card soft">
+          <h3>Offline tasarım</h3>
+          <p>İnternet yokken bile çalışır. Veriler cihazında.</p>
+        </article>
+        <article class="card soft">
+          <h3>Kapasite modeli</h3>
+          <p>Abonelik yok. Sadece hayvan limiti artar.</p>
+        </article>
+        <article class="card soft">
+          <h3>Güvenli geri yükleme</h3>
+          <p>Hatalı/yanlış şifreli dosyada veri güvenliği öncelikli.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ekranlar">
+    <div class="wrap">
+      <div class="sectionHead row">
+        <div>
+          <h2>Uygulamadan ekran görüntüleri</h2>
+          <p>Gerçek ekranlar. Tıkla büyüt, sağ/sol ile gez.</p>
+        </div>
+        <button class="pill" id="openGallery" type="button">Tümünü gör</button>
+      </div>
+
+      <div class="shotsRail" role="list">
+        
+      <button class="shot" type="button" data-full="assets/screenshots/full/01.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 1">
+        <img src="assets/screenshots/thumb/01.webp" alt="Çiftlik Ajandası ekran görüntüsü 1" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/02.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 2">
+        <img src="assets/screenshots/thumb/02.webp" alt="Çiftlik Ajandası ekran görüntüsü 2" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/03.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 3">
+        <img src="assets/screenshots/thumb/03.webp" alt="Çiftlik Ajandası ekran görüntüsü 3" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/04.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 4">
+        <img src="assets/screenshots/thumb/04.webp" alt="Çiftlik Ajandası ekran görüntüsü 4" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/05.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 5">
+        <img src="assets/screenshots/thumb/05.webp" alt="Çiftlik Ajandası ekran görüntüsü 5" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/06.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 6">
+        <img src="assets/screenshots/thumb/06.webp" alt="Çiftlik Ajandası ekran görüntüsü 6" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/07.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 7">
+        <img src="assets/screenshots/thumb/07.webp" alt="Çiftlik Ajandası ekran görüntüsü 7" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/08.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 8">
+        <img src="assets/screenshots/thumb/08.webp" alt="Çiftlik Ajandası ekran görüntüsü 8" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/09.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 9">
+        <img src="assets/screenshots/thumb/09.webp" alt="Çiftlik Ajandası ekran görüntüsü 9" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/10.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 10">
+        <img src="assets/screenshots/thumb/10.webp" alt="Çiftlik Ajandası ekran görüntüsü 10" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/11.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 11">
+        <img src="assets/screenshots/thumb/11.webp" alt="Çiftlik Ajandası ekran görüntüsü 11" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shot" type="button" data-full="assets/screenshots/full/12.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 12">
+        <img src="assets/screenshots/thumb/12.webp" alt="Çiftlik Ajandası ekran görüntüsü 12" loading="lazy" decoding="async">
+      </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="paketler">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2>Paketler</h2>
+        <p>Ücretsiz 15 hayvan. Tüm özellikler açık; sadece kapasite artar.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="priceCard">
+          <div class="priceTop">
+            <div class="priceName">Ücretsiz</div>
+            <div class="priceValue">₺0</div>
+            <div class="priceNote">Başlamak için</div>
+          </div>
+          <ul class="list">
+            <li>15 hayvan limiti</li>
+            <li>Tüm özellikler açık</li>
+            <li>Nazik kapasite uyarısı</li>
+          </ul>
+        </article>
+
+        <article class="priceCard">
+          <div class="priceTop">
+            <div class="priceName">100 hayvan</div>
+            <div class="priceValue">₺99</div>
+            <div class="priceNote">Küçük çiftlikler</div>
+          </div>
+          <ul class="list">
+            <li>Tek seferlik ödeme</li>
+            <li>Tüm özellikler açık</li>
+            <li>Kapasite: 100</li>
+          </ul>
+        </article>
+
+        <article class="priceCard featured" aria-label="En popüler paket">
+          <div class="ribbon">Popüler</div>
+          <div class="priceTop">
+            <div class="priceName">300 hayvan</div>
+            <div class="priceValue">₺249</div>
+            <div class="priceNote">Büyüyen sürüler</div>
+          </div>
+          <ul class="list">
+            <li>Tek seferlik ödeme</li>
+            <li>Tüm özellikler açık</li>
+            <li>Kapasite: 300</li>
+          </ul>
+        </article>
+
+        <article class="priceCard">
+          <div class="priceTop">
+            <div class="priceName">500 hayvan</div>
+            <div class="priceValue">₺399</div>
+            <div class="priceNote">Daha büyük işletmeler</div>
+          </div>
+          <ul class="list">
+            <li>Tek seferlik ödeme</li>
+            <li>Tüm özellikler açık</li>
+            <li>Kapasite: 500</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="upgradeBox">
+        <h3>Yükseltme mantığı</h3>
+        <p>Daha yüksek pakete geçmek istersen, uygulama içinden <strong>fark ödeyerek</strong> yükseltebilirsin. Aynı şey ikinci kez “tam fiyat” ödemezsin.</p>
+        <div class="upgradeMini">
+          <div>100 → 300</div><div>Fark ödeyerek yükseltme</div>
+          <div>300 → 500</div><div>Fark ödeyerek yükseltme</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sss">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2>SSS</h2>
+        <p>Kısa cevaplar. Detay için destek sayfası.</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Verilerim internete gider mi?</summary>
+          <div class="faqBody">Hayır. Uygulama offline çalışır; veriler cihazında saklanır. Yedek paylaşımı tamamen senin kontrolündedir.</div>
+        </details>
+        <details>
+          <summary>Yedekleme nasıl çalışıyor?</summary>
+          <div class="faqBody">Yedek dosyasını şifreleyip kaydedebilir veya paylaşabilirsin. Geri yüklemede yanlış şifre/bozuk dosyada güvenli kapanış uygulanır.</div>
+        </details>
+        <details>
+          <summary>Paket alınca tüm özellikler mi açılıyor?</summary>
+          <div class="faqBody">Evet. Paketler sadece hayvan kapasitesini artırır; özellikler kapalı/açık değil.</div>
+        </details>
+        <details>
+          <summary>Google Play linki neden yok?</summary>
+          <div class="faqBody">Uygulama test aşamasında. Yayına çıktığında buton otomatik aktif edilecek.</div>
+        </details>
+      </div>
+
+      <div class="ctaBand">
+        <div>
+          <h3>İletişim</h3>
+          <p>Geri bildirim = daha iyi ürün. Kısa yaz, net çözeyim.</p>
+        </div>
+        <a class="pill primary" href="support.html" target="_blank" rel="noopener">Destek</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footerInner">
+    <div class="footLeft">© <span id="year"></span> Çiftlik Ajandası • Türkiye</div>
+    <div class="footLinks">
+      <a href="privacy.html">Gizlilik</a>
+      <a href="support.html" target="_blank" rel="noopener">Destek</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Gallery Modal -->
+<div class="modal" id="galleryModal" aria-hidden="true" role="dialog" aria-label="Ekran görüntüleri">
+  <div class="modalBackdrop" data-close="1"></div>
+  <div class="modalPanel" role="document">
+    <div class="modalHead">
+      <div class="modalTitle">Ekran görüntüleri</div>
+      <button class="iconBtn" type="button" data-close="1" aria-label="Kapat">✕</button>
+    </div>
+    <div class="gridShots">
+      
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/01.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 1">
+        <img src="assets/screenshots/thumb/01.webp" alt="Çiftlik Ajandası ekran görüntüsü 1" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/02.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 2">
+        <img src="assets/screenshots/thumb/02.webp" alt="Çiftlik Ajandası ekran görüntüsü 2" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/03.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 3">
+        <img src="assets/screenshots/thumb/03.webp" alt="Çiftlik Ajandası ekran görüntüsü 3" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/04.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 4">
+        <img src="assets/screenshots/thumb/04.webp" alt="Çiftlik Ajandası ekran görüntüsü 4" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/05.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 5">
+        <img src="assets/screenshots/thumb/05.webp" alt="Çiftlik Ajandası ekran görüntüsü 5" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/06.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 6">
+        <img src="assets/screenshots/thumb/06.webp" alt="Çiftlik Ajandası ekran görüntüsü 6" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/07.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 7">
+        <img src="assets/screenshots/thumb/07.webp" alt="Çiftlik Ajandası ekran görüntüsü 7" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/08.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 8">
+        <img src="assets/screenshots/thumb/08.webp" alt="Çiftlik Ajandası ekran görüntüsü 8" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/09.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 9">
+        <img src="assets/screenshots/thumb/09.webp" alt="Çiftlik Ajandası ekran görüntüsü 9" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/10.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 10">
+        <img src="assets/screenshots/thumb/10.webp" alt="Çiftlik Ajandası ekran görüntüsü 10" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/11.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 11">
+        <img src="assets/screenshots/thumb/11.webp" alt="Çiftlik Ajandası ekran görüntüsü 11" loading="lazy" decoding="async">
+      </button>
+
+      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/12.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 12">
+        <img src="assets/screenshots/thumb/12.webp" alt="Çiftlik Ajandası ekran görüntüsü 12" loading="lazy" decoding="async">
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lbNav prev" type="button" aria-label="Önceki">‹</button>
+  <img id="lbImg" alt="Ekran görüntüsü"/>
+  <button class="lbNav next" type="button" aria-label="Sonraki">›</button>
+  <button class="lbClose" type="button" aria-label="Kapat">✕</button>
+</div>
+
+<div class="toast" id="toast" aria-hidden="true"></div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
