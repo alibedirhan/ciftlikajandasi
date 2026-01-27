@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kapalı Test — Çiftlik Ajandası</title>
+
+  <link rel="canonical" href="https://alibedirhan.github.io/ciftlikajandasi/beta.html">
+  <meta property="og:url" content="https://alibedirhan.github.io/ciftlikajandasi/beta.html">
+  <meta name="description" content="Kapalı test daveti için form. E-postanı bırak, test erişimi açılınca davet edelim.">
+  <meta name="theme-color" content="#1f3f34"/>
+  <link rel="icon" type="image/png" href="assets/img/app_icon.png"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body class="page">
+<a class="skip" href="#main">İçeriğe atla</a>
+
+<header class="topbar">
+  <div class="wrap topbarInner">
+    <a class="brand" href="./" aria-label="Ana sayfa">
+      <img class="brandIcon" src="assets/img/app_icon.png" alt="" aria-hidden="true">
+      <div class="brandText">
+        <div class="brandName">Çiftlik Ajandası</div>
+        <div class="brandTag">Offline çiftlik kayıtları, yedekleme ve düzen.</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a class="navLink" href="./#ozellikler">Özellikler</a>
+      <a class="navLink" href="./#ekranlar">Ekranlar</a>
+      <a class="navLink" href="./#paketler">Paketler</a>
+      <a class="navLink" href="privacy.html">Gizlilik</a>
+      <a class="navLink" href="support.html" target="_blank" rel="noopener">Destek</a>
+    </nav>
+    <div class="actions">
+      <button class="iconBtn" id="themeBtn" type="button" aria-label="Tema değiştir">☾</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap pageWrap">
+  <div class="pageCard">
+    <h1>Kapalı test (beta) daveti</h1>
+    <p class="lead">
+      Kapalı teste katılmak için e‑posta adresini bırak. Seni tester listesine eklediğimde Google Play üzerinden davet alırsın.
+      Davet gelmeden test linki çalışmayabilir.
+    </p>
+
+    <div class="miniNote">
+      <strong>Test linki:</strong>
+      <a href="https://play.google.com/apps/testing/com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">
+        play.google.com/apps/testing/com.alibedirhan.ciftlik_ajandasi
+      </a>
+      <div class="small muted2" style="margin-top:8px">Not: Bu link sadece tester listesine eklenen hesaplarda sorunsuz açılır.</div>
+    </div>
+
+    <form id="betaForm" novalidate>
+      <div class="formGrid">
+        <div class="field">
+          <label for="email">E‑posta (Gmail önerilir) *</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="ornek@gmail.com" required>
+        </div>
+
+        <div class="field">
+          <label for="name">Ad / Takma ad</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="İsteğe bağlı">
+        </div>
+
+        <div class="field">
+          <label for="device">Telefon modeli</label>
+          <input id="device" name="device" type="text" placeholder="Örn: Samsung A54">
+        </div>
+
+        <div class="field">
+          <label for="android">Android sürümü</label>
+          <input id="android" name="android" type="text" placeholder="Örn: Android 14">
+        </div>
+
+        <div class="field formFull">
+          <label for="note">Kısa not</label>
+          <textarea id="note" name="note" placeholder="Kullanım senaryon / beklentin (isteğe bağlı)"></textarea>
+        </div>
+      </div>
+
+      <div class="checkboxRow">
+        <input id="consent" type="checkbox" required>
+        <label for="consent">Bu e‑posta adresini yalnızca kapalı test daveti ve test iletişimi için kullanmana izin veriyorum.</label>
+      </div>
+
+      <div class="formActions">
+        <button class="pill primary" type="submit">Gönder</button>
+        <a class="pill" href="./">Ana sayfaya dön</a>
+        <a class="pill ghost" href="privacy.html">Gizlilik politikası</a>
+      </div>
+
+      <div id="betaFormError" class="errorText" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footerInner">
+    <div class="footLeft">© <span id="year"></span> Çiftlik Ajandası</div>
+    <div class="footLinks">
+      <a href="privacy.html">Gizlilik</a>
+      <a href="support.html">Destek</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/beta.js" defer></script>
+
+<div class="toast" id="toast" aria-hidden="true"></div>
+</body>
+</html>

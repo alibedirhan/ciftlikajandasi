@@ -491,6 +491,33 @@ h1{
 }
 .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
 
+/* --- Beta form --- */
+.formGrid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
+.field{display:flex; flex-direction:column; gap:8px}
+.field label{font-weight:800}
+.field input, .field textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid var(--stroke2);
+  background: rgba(255,255,255,.02);
+  color:var(--text);
+  outline:none;
+}
+.field input::placeholder, .field textarea::placeholder{color:var(--muted2)}
+.field input:focus, .field textarea:focus{border-color: rgba(159,231,194,.55); box-shadow: 0 0 0 4px rgba(159,231,194,.10)}
+.field textarea{min-height:110px; resize:vertical}
+.formFull{grid-column:1 / -1}
+.checkboxRow{display:flex; gap:10px; align-items:flex-start; margin-top:12px; color:var(--muted)}
+.checkboxRow input{margin-top:4px}
+.formActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+.errorText{margin-top:10px; color: rgba(255,210,210,.95); font-size:13px}
+.okText{margin-top:10px; color: rgba(159,231,194,.95); font-size:13px}
+
+@media (max-width: 760px){
+  .formGrid{grid-template-columns:1fr}
+}
+
 /* Utilities for text-heavy pages (privacy/support) */
 .muted{color:var(--muted)}
 .muted2{color:var(--muted2)}
