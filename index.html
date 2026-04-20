@@ -1,48 +1,64 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Çiftlik Ajandası — Offline sürü ajandası</title>
-  
-  <link rel="canonical" href="https://alibedirhan.github.io/ciftlikajandasi/">
-  <meta property="og:url" content="https://alibedirhan.github.io/ciftlikajandasi/">
-<meta name="description" content="Çiftlik Ajandası: Offline hayvan kayıtları, yaklaşan aşı/doğum hatırlatmaları ve şifreli yedekleme. Abonelik yok, kapasite modeli."/>
-  <meta name="theme-color" content="#1f3f34"/>
-  <link rel="icon" type="image/png" href="assets/img/app_icon.png"/>
-  <meta property="og:title" content="Çiftlik Ajandası"/>
-  <meta property="og:description" content="Offline çiftlik kayıtları, şifreli yedekleme ve güvenli geri yükleme."/>
-  <meta property="og:image" content="assets/img/hero_banner.png"/>
+  <title>Çiftlik Ajandası — Sürü Takibi, Ajanda ve Güvenli Yedekleme</title>
+  <meta name="description" content="Çiftlik Ajandası; hayvan kayıtları, akıllı dashboard, küpe okuma, aşı-doğum takibi, süt-yem-satış modülleri ve kullanıcı kontrollü yedekleme sunan Android uygulamasıdır."/>
+  <link rel="canonical" href="https://alibedirhan.github.io/ciftlikajandasi/"/>
+  <meta name="theme-color" content="#0f5b2b"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="tr_TR"/>
+  <meta property="og:site_name" content="Çiftlik Ajandası"/>
+  <meta property="og:title" content="Çiftlik Ajandası — Sürü takibi tek yerde"/>
+  <meta property="og:description" content="Hayvan kayıtları, ajanda, uyarılar, küpe okuma, sağlık takibi ve güvenli yedekleme."/>
+  <meta property="og:url" content="https://alibedirhan.github.io/ciftlikajandasi/"/>
+  <meta property="og:image" content="https://alibedirhan.github.io/ciftlikajandasi/assets/img/og-image-v2.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Çiftlik Ajandası — Sürü takibi tek yerde"/>
+  <meta name="twitter:description" content="Hayvan kayıtları, ajanda, uyarılar, küpe okuma, sağlık takibi ve güvenli yedekleme."/>
+  <meta name="twitter:image" content="https://alibedirhan.github.io/ciftlikajandasi/assets/img/og-image-v2.png"/>
   <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Çiftlik Ajandası",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Android",
+    "description": "Hayvan kayıtları, ajanda, uyarılar, küpe okuma, sağlık takibi ve kullanıcı kontrollü yedekleme için Android uygulaması.",
+    "url": "https://alibedirhan.github.io/ciftlikajandasi/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi",
+    "publisher": { "@type": "Organization", "name": "Çiftlik Ajandası" }
+  }
+  </script>
 </head>
 <body>
 <a class="skip" href="#main">İçeriğe atla</a>
-
 <header class="topbar">
   <div class="wrap topbarInner">
-    <a class="brand" href="./" aria-label="Ana sayfa">
-      <img class="brandIcon" src="assets/img/app_icon.png" alt="" aria-hidden="true">
+    <a class="brand" href="./" aria-label="Çiftlik Ajandası ana sayfa">
+      <img class="brandIcon" src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/>
       <div class="brandText">
         <div class="brandName">Çiftlik Ajandası</div>
-        <div class="brandTag">Offline çiftlik kayıtları, yedekleme ve düzen.</div>
+        <div class="brandTag">Sürü takibi, ajanda ve yedekleme.</div>
       </div>
     </a>
-
-    <nav class="nav">
+    <nav class="nav" aria-label="Ana menü">
       <a class="navLink" href="#ozellikler">Özellikler</a>
       <a class="navLink" href="#ekranlar">Ekranlar</a>
-      <a class="navLink" href="#paketler">Paketler</a>
+      <a class="navLink" href="#planlar">Planlar</a>
       <a class="navLink" href="#sss">SSS</a>
       <a class="navLink" href="privacy.html">Gizlilik</a>
-      <a class="navLink" href="support.html" target="_blank" rel="noopener">Destek</a>
+      <a class="navLink" href="support.html">Destek</a>
     </nav>
-
     <div class="actions">
       <button class="iconBtn" id="themeBtn" type="button" aria-label="Tema değiştir">☾</button>
-      <a class="pill" id="betaBtn" href="beta.html" title="Kapalı test daveti">Kapalı test</a>
-      <button class="pill" id="playBtn" type="button" aria-disabled="true" title="Test aşamasında — link henüz yok">
-        Google Play (yakında)
-      </button>
+      <a class="pill ghost" href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">Instagram</a>
+      <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play</a>
     </div>
   </div>
 </header>
@@ -51,94 +67,106 @@
   <section class="hero">
     <div class="wrap heroGrid">
       <div class="heroCopy">
-        <div class="badgeRow">
-          <span class="badge">Offline</span>
-          <span class="badge">Abonelik yok</span>
-          <span class="badge">Şifreli yedek</span>
+        <div class="badgeRow" aria-label="Ürün öne çıkanları">
+          <span class="badge">15 hayvana kadar ücretsiz</span>
+          <span class="badge">Yıllık kapasite planları</span>
+          <span class="badge">Yerel + Drive yedekleme</span>
+          <span class="badge">Küpe okuma</span>
         </div>
-
-        <h1>Çiftlik kayıtlarını <span class="accent">tek yerde</span> topla.</h1>
-        <p class="lead">
-          Hayvan kayıtları, yaklaşan aşı/doğum, notlar ve hızlı işlemler.
-          İnternet şart değil — veriler cihazında.
-        </p>
-
+        <h1>Çiftlik işlerini <span class="accent">tek ajandada</span> yönet.</h1>
+        <p class="lead">Hayvan kayıtları, akıllı dashboard, uyarılar, küpe okuma, sağlık takibi, gebelik-doğum süreçleri, süt-yem-satış kayıtları ve güvenli yedekleme tek yerde.</p>
         <div class="heroCtas">
-          <a class="pill" href="beta.html" title="Kapalı teste katılmak için form">Kapalı test formu</a>
-          <button class="pill primary" type="button" id="playBtn2" aria-disabled="true">Google Play (yakında)</button>
-          <a class="pill" href="#paketler">Paketleri gör</a>
-          <a class="pill ghost" href="support.html" target="_blank" rel="noopener">Destek</a>
+          <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play’den aç</a>
+          <a class="pill" href="#ekranlar">Ekranları gör</a>
+          <a class="pill ghost" href="support.html">Destek al</a>
         </div>
-
-        <div class="trust">
-          <div class="trustItem">
-            <div class="trustTitle">Veri cihazında</div>
-            <div class="trustSub">Sunucu yok • takip sende</div>
-          </div>
-          <div class="trustItem">
-            <div class="trustTitle">Güvenli yedek</div>
-            <div class="trustSub">Paylaş / kaydet / geri yükle</div>
-          </div>
-          <div class="trustItem">
-            <div class="trustTitle">Kapasite modeli</div>
-            <div class="trustSub">İhtiyacın kadar yükselt</div>
-          </div>
+        <p class="note heroNote"><strong>Net bilgi:</strong> Güncel fiyat ve ödeme onayı Google Play ödeme ekranında gösterilir. Abonelik yönetimi Google Play hesabı üzerinden yapılır.</p>
+        <div class="trust" aria-label="Güven bilgileri">
+          <div class="trustItem"><div class="trustTitle">Veriler cihazda</div><div class="trustSub">Hayvan kayıtları varsayılan olarak telefonda tutulur.</div></div>
+          <div class="trustItem"><div class="trustTitle">Yedekleme kontrol sende</div><div class="trustSub">Yerel yedek ve isteğe bağlı Google Drive akışı.</div></div>
+          <div class="trustItem"><div class="trustTitle">Saha dostu arayüz</div><div class="trustSub">Kısa metin, net aksiyon, hızlı kullanım.</div></div>
         </div>
       </div>
-
       <div class="heroMedia">
-        <div class="device">
-          <div class="deviceTop"></div>
-          <img class="deviceShot" src="assets/screenshots/full/hero.jpg" alt="Uygulama ekran görüntüsü" loading="eager" decoding="async">
-          <div class="deviceGlow" aria-hidden="true"></div>
-        <div class="deviceCaption">Gerçek uygulama ekranı.</div>
-        </div>
-      </div>
-    </div>
+        <aside class="heroShowcase" aria-label="Çiftlik Ajandası ürün ön izlemesi">
+          <div class="showcaseHeader">
+            <img class="showcaseIcon" src="assets/img/app_icon_v2.png" alt="Çiftlik Ajandası uygulama ikonu" loading="eager" decoding="async"/>
+            <div>
+              <p class="showcaseEyebrow">Android için güncel sürü takip uygulaması</p>
+              <h2>Çiftlik Ajandası</h2>
+              <p>Ajanda, kayıt, uyarı ve yedekleme akışlarını tek merkezde toparlar.</p>
+            </div>
+          </div>
 
-    <div class="heroMascot" aria-hidden="true">
-      <canvas id="mascotCanvas" width="560" height="300"></canvas>
+          <div class="showcaseBadges" aria-label="Öne çıkan kullanım alanları">
+            <span>15 ücretsiz</span>
+            <span>Drive yedek</span>
+            <span>Küpe okuma</span>
+            <span>360° profil</span>
+          </div>
+
+          <div class="previewGrid" aria-label="Uygulama ekran ön izlemeleri">
+            <div class="phoneShot mainShot">
+              <img src="assets/screenshots/full/03-akilli-dashboard.webp" alt="Çiftlik Ajandası akıllı dashboard ekranı" loading="eager" decoding="async"/>
+            </div>
+            <div class="phoneShot">
+              <img src="assets/screenshots/full/07-hayvan-listesi.webp" alt="Çiftlik Ajandası hayvan listesi ekranı" loading="eager" decoding="async"/>
+            </div>
+            <div class="phoneShot">
+              <img src="assets/screenshots/full/08-360-hayvan-profili.webp" alt="Çiftlik Ajandası 360 derece hayvan profili ekranı" loading="eager" decoding="async"/>
+            </div>
+          </div>
+
+          <div class="showcaseFooter">
+            <div>
+              <strong>Net kullanım</strong>
+              <span>Günlük işler, uyarılar ve kayıtlar okunaklı kartlarla sunulur.</span>
+            </div>
+            <a class="showcaseLink" href="#ekranlar">Tüm ekranları gör</a>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 
   <section class="section" id="ozellikler">
     <div class="wrap">
       <div class="sectionHead">
-        <h2>Neden Çiftlik Ajandası?</h2>
-        <p>Kısa, net, işini yapan ajanda. Gösteriş değil; hız ve güven.</p>
+        <h2>Çiftçinin ihtiyacı olan temel akışlar</h2>
+        <p>Abartılı vaat yok. Uygulamada bulunan işlevleri sade ve güvenilir şekilde anlatıyoruz.</p>
       </div>
-
-      <div class="cards3">
-        <article class="card">
-          <div class="cardIcon">📌</div>
-          <h3>Takip tek yerde</h3>
-          <p>Hayvan, tür, küpe, not, işlem… dağınıklık bitiyor.</p>
-        </article>
-        <article class="card">
-          <div class="cardIcon">🔒</div>
-          <h3>Şifreli yedek</h3>
-          <p>Yedek dosyanı paylaş, kaydet; geri yüklemede güvenli kapanış.</p>
-        </article>
-        <article class="card">
-          <div class="cardIcon">⚡</div>
-          <h3>Hızlı & stabil</h3>
-          <p>Büyük listelerde bile akıcı. Gereksiz ekran yok.</p>
-        </article>
+      <div class="cards4">
+        <article class="card"><div class="cardIcon">🐄</div><h3>Hayvan kayıtları</h3><p>Küpe, tür, grup, not ve geçmiş bilgilerini düzenli tut.</p></article>
+        <article class="card"><div class="cardIcon">📊</div><h3>Akıllı dashboard</h3><p>Bugünün işleri, kritik uyarılar ve hızlı aksiyonlar tek ekranda.</p></article>
+        <article class="card"><div class="cardIcon">🔎</div><h3>Küpe okuma</h3><p>Kamera destekli okuma akışıyla kayıt bulmayı hızlandır.</p></article>
+        <article class="card"><div class="cardIcon">🩺</div><h3>Sağlık & aşı</h3><p>Aşı, sağlık, gebelik ve doğum takiplerini ajandaya bağla.</p></article>
+        <article class="card soft"><div class="cardIcon">🥛</div><h3>Süt, yem, satış</h3><p>Günlük işletme kayıtlarını ayrı ayrı takip et.</p></article>
+        <article class="card soft"><div class="cardIcon">🧬</div><h3>Damızlık & genetik</h3><p>Sürü geçmişini daha anlamlı kararlar için düzenle.</p></article>
+        <article class="card soft"><div class="cardIcon">🧾</div><h3>Raporlar</h3><p>Kayıtlarını daha okunur özetlere dönüştür.</p></article>
+        <article class="card soft"><div class="cardIcon">☁️</div><h3>Güvenli yedekleme</h3><p>Yerel yedek al, telefona kaydet veya isteğe bağlı Drive kullan.</p></article>
       </div>
+    </div>
+  </section>
 
-      <div class="cards3 compact">
-        <article class="card soft">
-          <h3>Offline tasarım</h3>
-          <p>İnternet yokken bile çalışır. Veriler cihazında.</p>
-        </article>
-        <article class="card soft">
-          <h3>Kapasite modeli</h3>
-          <p>Abonelik yok. Sadece hayvan limiti artar.</p>
-        </article>
-        <article class="card soft">
-          <h3>Güvenli geri yükleme</h3>
-          <p>Hatalı/yanlış şifreli dosyada veri güvenliği öncelikli.</p>
-        </article>
+  <section class="section">
+    <div class="wrap infoGrid">
+      <div class="infoPanel">
+        <h2>Veri tarafında çizgi net</h2>
+        <p>Hayvan kayıtları, küpe numaraları, notlar ve çiftlik içerikleri geliştirici sunucusunda tutulmak üzere tasarlanmamıştır.</p>
+        <ul class="clean">
+          <li>Yedekleme kullanıcı tarafından başlatılır.</li>
+          <li>Google Drive kullanılırsa Google servisleri devreye girer.</li>
+          <li>Teknik tanılama için Firebase servisleri kullanılabilir.</li>
+        </ul>
+      </div>
+      <div class="infoPanel">
+        <h2>Uygun planı seç, kapasiteni büyüt</h2>
+        <p>Ücretsiz kullanım 15 hayvana kadar başlar. İhtiyaç arttığında Google Play üzerinden yıllık kapasite planına geçebilirsin.</p>
+        <ul class="clean">
+          <li>Fiyat bilgisi web sayfasında sabitlenmez.</li>
+          <li>Ödeme, iptal ve yenileme Google Play üzerinden yönetilir.</li>
+          <li>Plan limitleri uygulama içindeki aktif haklara göre uygulanır.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -147,256 +175,75 @@
     <div class="wrap">
       <div class="sectionHead row">
         <div>
-          <h2>Uygulamadan ekran görüntüleri</h2>
-          <p>Gerçek ekranlar. Tıkla büyüt, sağ/sol ile gez.</p>
+          <h2>Güncel ekran görüntüleri</h2>
+          <p>Play Store için hazırlanan güncel uygulama ekranları kullanıldı.</p>
         </div>
-        <button class="pill" id="openGallery" type="button">Tümünü gör</button>
+        <button class="pill" id="openGallery" type="button">Galeriyi aç</button>
       </div>
-
-      <div class="shotsRail" role="list">
-        
-      <button class="shot" type="button" data-full="assets/screenshots/full/01.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 1">
-        <img src="assets/screenshots/thumb/01.webp" alt="Çiftlik Ajandası ekran görüntüsü 1" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/02.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 2">
-        <img src="assets/screenshots/thumb/02.webp" alt="Çiftlik Ajandası ekran görüntüsü 2" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/03.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 3">
-        <img src="assets/screenshots/thumb/03.webp" alt="Çiftlik Ajandası ekran görüntüsü 3" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/04.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 4">
-        <img src="assets/screenshots/thumb/04.webp" alt="Çiftlik Ajandası ekran görüntüsü 4" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/05.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 5">
-        <img src="assets/screenshots/thumb/05.webp" alt="Çiftlik Ajandası ekran görüntüsü 5" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/06.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 6">
-        <img src="assets/screenshots/thumb/06.webp" alt="Çiftlik Ajandası ekran görüntüsü 6" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/07.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 7">
-        <img src="assets/screenshots/thumb/07.webp" alt="Çiftlik Ajandası ekran görüntüsü 7" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/08.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 8">
-        <img src="assets/screenshots/thumb/08.webp" alt="Çiftlik Ajandası ekran görüntüsü 8" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/09.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 9">
-        <img src="assets/screenshots/thumb/09.webp" alt="Çiftlik Ajandası ekran görüntüsü 9" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/10.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 10">
-        <img src="assets/screenshots/thumb/10.webp" alt="Çiftlik Ajandası ekran görüntüsü 10" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/11.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 11">
-        <img src="assets/screenshots/thumb/11.webp" alt="Çiftlik Ajandası ekran görüntüsü 11" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shot" type="button" data-full="assets/screenshots/full/12.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 12">
-        <img src="assets/screenshots/thumb/12.webp" alt="Çiftlik Ajandası ekran görüntüsü 12" loading="lazy" decoding="async">
-      </button>
+      <div class="shotsRail" role="list" aria-label="Çiftlik Ajandası ekran görüntüleri">
+        <button class="shot" type="button" data-full="assets/screenshots/full/01-kolay-baslangic.webp"><img src="assets/screenshots/thumb/01-kolay-baslangic.webp" alt="Kolay başlangıç ekranı ve işletme bilgileri" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/02-tum-moduller.webp"><img src="assets/screenshots/thumb/02-tum-moduller.webp" alt="Çiftlik Ajandası tüm modüller ekranı" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/03-akilli-dashboard.webp"><img src="assets/screenshots/thumb/03-akilli-dashboard.webp" alt="Akıllı dashboard ve kritik uyarılar" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/04-uyari-sistemi.webp"><img src="assets/screenshots/thumb/04-uyari-sistemi.webp" alt="Aşı ve doğum odaklı uyarı sistemi" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/05-asi-takibi.webp"><img src="assets/screenshots/thumb/05-asi-takibi.webp" alt="Aşı takip listesi" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/06-gebelik-takibi.webp"><img src="assets/screenshots/thumb/06-gebelik-takibi.webp" alt="Gebelik ve doğum takip listesi" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/07-hayvan-listesi.webp"><img src="assets/screenshots/thumb/07-hayvan-listesi.webp" alt="Küpe numarası ile hayvan listesi" loading="lazy" decoding="async"/></button>
+        <button class="shot" type="button" data-full="assets/screenshots/full/08-360-hayvan-profili.webp"><img src="assets/screenshots/thumb/08-360-hayvan-profili.webp" alt="360 derece hayvan profili ve detay kartları" loading="lazy" decoding="async"/></button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="paketler">
+  <section class="section" id="planlar">
     <div class="wrap">
       <div class="sectionHead">
-        <h2>Paketler</h2>
-        <p>Ücretsiz 15 hayvan. Tüm özellikler açık; sadece kapasite artar.</p>
+        <h2>Kapasite planları</h2>
+        <p>Planlar Google Play üzerinden yıllık abonelik olarak yönetilir. Güncel fiyat Google Play ödeme ekranında görünür.</p>
       </div>
-
       <div class="pricing">
-        <article class="priceCard">
-          <div class="priceTop">
-            <div class="priceName">Ücretsiz</div>
-            <div class="priceValue">₺0</div>
-            <div class="priceNote">Başlamak için</div>
-          </div>
-          <ul class="list">
-            <li>15 hayvan limiti</li>
-            <li>Tüm özellikler açık</li>
-            <li>Nazik kapasite uyarısı</li>
-          </ul>
-        </article>
-
-        <article class="priceCard">
-          <div class="priceTop">
-            <div class="priceName">100 hayvan</div>
-            <div class="priceValue">₺99</div>
-            <div class="priceNote">Küçük çiftlikler</div>
-          </div>
-          <ul class="list">
-            <li>Tek seferlik ödeme</li>
-            <li>Tüm özellikler açık</li>
-            <li>Kapasite: 100</li>
-          </ul>
-        </article>
-
-        <article class="priceCard featured" aria-label="En popüler paket">
-          <div class="ribbon">Popüler</div>
-          <div class="priceTop">
-            <div class="priceName">300 hayvan</div>
-            <div class="priceValue">₺249</div>
-            <div class="priceNote">Büyüyen sürüler</div>
-          </div>
-          <ul class="list">
-            <li>Tek seferlik ödeme</li>
-            <li>Tüm özellikler açık</li>
-            <li>Kapasite: 300</li>
-          </ul>
-        </article>
-
-        <article class="priceCard">
-          <div class="priceTop">
-            <div class="priceName">500 hayvan</div>
-            <div class="priceValue">₺399</div>
-            <div class="priceNote">Daha büyük işletmeler</div>
-          </div>
-          <ul class="list">
-            <li>Tek seferlik ödeme</li>
-            <li>Tüm özellikler açık</li>
-            <li>Kapasite: 500</li>
-          </ul>
-        </article>
+        <article class="priceCard"><div class="priceName">Ücretsiz</div><div class="priceCap">15</div><p>Başlangıç için ücretsiz hayvan kapasitesi.</p><div class="priceMeta">Ödeme gerekmez.</div></article>
+        <article class="priceCard featured"><div class="priceName">Başlangıç</div><div class="priceCap">50</div><p>Küçük sürüler için yıllık kapasite planı.</p><div class="priceMeta">Google Play üzerinden.</div></article>
+        <article class="priceCard"><div class="priceName">Küçük Çiftlik</div><div class="priceCap">150</div><p>Büyüyen işletmeler için daha geniş kapasite.</p><div class="priceMeta">Google Play üzerinden.</div></article>
+        <article class="priceCard"><div class="priceName">Orta Çiftlik</div><div class="priceCap">350</div><p>Daha yoğun kayıt tutan işletmeler için.</p><div class="priceMeta">Google Play üzerinden.</div></article>
+        <article class="priceCard"><div class="priceName">Büyük Çiftlik</div><div class="priceCap">700</div><p>Büyük sürüler için en yüksek public kapasite.</p><div class="priceMeta">Google Play üzerinden.</div></article>
       </div>
-
-      <div class="upgradeBox">
-        <h3>Yükseltme mantığı</h3>
-        <p>Daha yüksek pakete geçmek istersen, uygulama içinden <strong>fark ödeyerek</strong> yükseltebilirsin. Aynı şey ikinci kez “tam fiyat” ödemezsin.</p>
-        <div class="upgradeMini">
-          <div>100 → 300</div><div>Fark ödeyerek yükseltme</div>
-          <div>300 → 500</div><div>Fark ödeyerek yükseltme</div>
-        </div>
-      </div>
+      <p class="note">Limitsiz test/promo hakları public plan gibi pazarlanmaz. İade ve abonelik işlemleri Google Play politikalarına bağlıdır. Detay için <a href="terms.html">abonelik ve kullanım şartları</a>.</p>
     </div>
   </section>
 
   <section class="section" id="sss">
     <div class="wrap">
-      <div class="sectionHead">
-        <h2>SSS</h2>
-        <p>Kısa cevaplar. Detay için destek sayfası.</p>
-      </div>
-
-      <div class="faq">
-        <details>
-          <summary>Verilerim internete gider mi?</summary>
-          <div class="faqBody">Hayır. Uygulama offline çalışır; veriler cihazında saklanır. Yedek paylaşımı tamamen senin kontrolündedir.</div>
-        </details>
-        <details>
-          <summary>Yedekleme nasıl çalışıyor?</summary>
-          <div class="faqBody">Yedek dosyasını şifreleyip kaydedebilir veya paylaşabilirsin. Geri yüklemede yanlış şifre/bozuk dosyada güvenli kapanış uygulanır.</div>
-        </details>
-        <details>
-          <summary>Paket alınca tüm özellikler mi açılıyor?</summary>
-          <div class="faqBody">Evet. Paketler sadece hayvan kapasitesini artırır; özellikler kapalı/açık değil.</div>
-        </details>
-        <details>
-          <summary>Google Play linki neden yok?</summary>
-          <div class="faqBody">Uygulama test aşamasında. Yayına çıktığında buton otomatik aktif edilecek.</div>
-        </details>
-      </div>
-
-      <div class="ctaBand">
-        <div>
-          <h3>İletişim</h3>
-          <p>Geri bildirim = daha iyi ürün. Kısa yaz, net çözeyim.</p>
-        </div>
-        <a class="pill primary" href="support.html" target="_blank" rel="noopener">Destek</a>
+      <div class="sectionHead"><h2>Sık sorulan sorular</h2><p>Kısa ve net cevaplar.</p></div>
+      <div class="faqGrid">
+        <article class="faqItem"><h3>Verilerim nerede saklanır?</h3><p>Hayvan kayıtları varsayılan olarak cihazında tutulur. Geliştirici sunucusunda hayvan kayıt sistemi kurulmamıştır.</p></article>
+        <article class="faqItem"><h3>İnternet olmadan kullanabilir miyim?</h3><p>Temel kayıt ve takip akışları internet olmadan kullanılabilir. Drive yedekleme, Google Play abonelikleri ve teknik servisler internet gerektirir.</p></article>
+        <article class="faqItem"><h3>Google Drive zorunlu mu?</h3><p>Hayır. Drive yedekleme isteğe bağlıdır. Kullanırsan Google hesabın ve Google servisleri devreye girer.</p></article>
+        <article class="faqItem"><h3>Aboneliği nereden iptal ederim?</h3><p>Abonelikler Google Play hesabın üzerinden yönetilir. Güncel ödeme ve yenileme bilgisi Google Play ekranında gösterilir.</p></article>
+        <article class="faqItem"><h3>Küpe okuma kesin sonuç verir mi?</h3><p>Kamera destekli okuma yardımcı akıştır. Işık, açı ve görüntü kalitesi sonucu etkileyebilir; kritik kayıtta kullanıcı kontrolü önemlidir.</p></article>
+        <article class="faqItem"><h3>Yedek almadan uygulamayı silersem ne olur?</h3><p>Uygulama kaldırıldığında cihazdaki uygulama verileri kaybolabilir. Büyük işlem öncesi güncel yedeği saklamak en güvenli yoldur.</p></article>
       </div>
     </div>
   </section>
 </main>
 
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Ekran görüntüsü galerisi">
+  <button class="lbClose" id="lbClose" type="button" aria-label="Galeriyi kapat">×</button>
+  <button class="lbPrev" id="lbPrev" type="button" aria-label="Önceki ekran">‹</button>
+  <img id="lightboxImg" alt=""/>
+  <button class="lbNext" id="lbNext" type="button" aria-label="Sonraki ekran">›</button>
+</div>
+
 <footer class="footer">
-  <div class="wrap footerInner">
-    <div class="footLeft">© <span id="year"></span> Çiftlik Ajandası • Türkiye</div>
-    <div class="footLinks">
+  <div class="wrap footerGrid">
+    <div>© 2026 Çiftlik Ajandası. Sade, güvenilir sürü takibi.</div>
+    <div class="footerLinks">
       <a href="privacy.html">Gizlilik</a>
-      <a href="support.html" target="_blank" rel="noopener">Destek</a>
+      <a href="terms.html">Abonelik Şartları</a>
+      <a href="support.html">Destek</a>
+      <a href="beta.html">Test Programı</a>
+      <a href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
 </footer>
-
-<!-- Gallery Modal -->
-<div class="modal" id="galleryModal" aria-hidden="true" role="dialog" aria-label="Ekran görüntüleri">
-  <div class="modalBackdrop" data-close="1"></div>
-  <div class="modalPanel" role="document">
-    <div class="modalHead">
-      <div class="modalTitle">Ekran görüntüleri</div>
-      <button class="iconBtn" type="button" data-close="1" aria-label="Kapat">✕</button>
-    </div>
-    <div class="gridShots">
-      
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/01.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 1">
-        <img src="assets/screenshots/thumb/01.webp" alt="Çiftlik Ajandası ekran görüntüsü 1" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/02.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 2">
-        <img src="assets/screenshots/thumb/02.webp" alt="Çiftlik Ajandası ekran görüntüsü 2" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/03.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 3">
-        <img src="assets/screenshots/thumb/03.webp" alt="Çiftlik Ajandası ekran görüntüsü 3" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/04.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 4">
-        <img src="assets/screenshots/thumb/04.webp" alt="Çiftlik Ajandası ekran görüntüsü 4" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/05.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 5">
-        <img src="assets/screenshots/thumb/05.webp" alt="Çiftlik Ajandası ekran görüntüsü 5" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/06.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 6">
-        <img src="assets/screenshots/thumb/06.webp" alt="Çiftlik Ajandası ekran görüntüsü 6" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/07.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 7">
-        <img src="assets/screenshots/thumb/07.webp" alt="Çiftlik Ajandası ekran görüntüsü 7" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/08.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 8">
-        <img src="assets/screenshots/thumb/08.webp" alt="Çiftlik Ajandası ekran görüntüsü 8" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/09.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 9">
-        <img src="assets/screenshots/thumb/09.webp" alt="Çiftlik Ajandası ekran görüntüsü 9" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/10.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 10">
-        <img src="assets/screenshots/thumb/10.webp" alt="Çiftlik Ajandası ekran görüntüsü 10" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/11.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 11">
-        <img src="assets/screenshots/thumb/11.webp" alt="Çiftlik Ajandası ekran görüntüsü 11" loading="lazy" decoding="async">
-      </button>
-
-      <button class="shotGridItem" type="button" data-full="assets/screenshots/full/12.webp" aria-label="Çiftlik Ajandası ekran görüntüsü 12">
-        <img src="assets/screenshots/thumb/12.webp" alt="Çiftlik Ajandası ekran görüntüsü 12" loading="lazy" decoding="async">
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lbNav prev" type="button" aria-label="Önceki">‹</button>
-  <img id="lbImg" alt="Ekran görüntüsü"/>
-  <button class="lbNav next" type="button" aria-label="Sonraki">›</button>
-  <button class="lbClose" type="button" aria-label="Kapat">✕</button>
-</div>
-
-<div class="toast" id="toast" aria-hidden="true"></div>
-
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>
