@@ -4,13 +4,13 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Gizlilik Politikası — Çiftlik Ajandası</title>
-  <meta name="description" content="Çiftlik Ajandası gizlilik politikası: cihazda saklanan kayıtlar, kullanıcı kontrollü yedekleme, Google Drive, Google Play satın alma ve Firebase teknik tanılama açıklamaları."/>
+  <meta name="description" content="Çiftlik Ajandası gizlilik politikası: cihazda saklanan kayıtlar, kullanıcı kontrollü yedekleme, Google Drive, Google Play satın alma, Firebase teknik tanılama ve isteğe bağlı anonim CAL veri paylaşımı açıklamaları."/>
   <link rel="canonical" href="https://alibedirhan.github.io/ciftlikajandasi/privacy.html"/>
   <meta name="theme-color" content="#0f5b2b"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"/>
   <meta property="og:title" content="Çiftlik Ajandası Gizlilik Politikası"/>
-  <meta property="og:description" content="Hayvan kayıtları, yedekleme, Google Drive, Google Play ve Firebase teknik servisleri hakkında gizlilik açıklaması."/>
+  <meta property="og:description" content="Hayvan kayıtları, yedekleme, Google Drive, Google Play, Firebase teknik servisleri ve isteğe bağlı anonim CAL veri paylaşımı hakkında gizlilik açıklaması."/>
   <meta property="og:url" content="https://alibedirhan.github.io/ciftlikajandasi/privacy.html"/>
   <meta property="og:image" content="https://alibedirhan.github.io/ciftlikajandasi/assets/img/og-image-v2.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
@@ -29,9 +29,9 @@
 <main id="main">
   <section class="pageHero">
     <div class="wrap">
-      <div class="badgeRow"><span class="badge">Son güncelleme: 20 Nisan 2026</span><span class="badge">Uygulama: Çiftlik Ajandası</span></div>
+      <div class="badgeRow"><span class="badge">Son güncelleme: 12 Haziran 2026</span><span class="badge">Uygulama: Çiftlik Ajandası</span></div>
       <h1>Gizlilik Politikası</h1>
-      <p class="lead">Bu sayfa Çiftlik Ajandası Android uygulamasında hangi verilerin cihazda tutulduğunu, hangi işlemlerde Google servislerinin devreye girdiğini ve teknik tanılama verilerinin ne amaçla kullanılabileceğini açıklar.</p>
+      <p class="lead">Bu sayfa Çiftlik Ajandası Android uygulamasında hangi verilerin cihazda tutulduğunu, hangi işlemlerde Google servislerinin devreye girdiğini, teknik tanılama verilerinin ne amaçla kullanılabileceğini ve isteğe bağlı anonim CAL veri paylaşımının nasıl çalıştığını açıklar.</p>
     </div>
   </section>
 
@@ -44,6 +44,7 @@
         <a href="#drive">Google Drive</a>
         <a href="#billing">Google Play</a>
         <a href="#firebase">Firebase</a>
+        <a href="#cal-paylasim">CAL veri paylaşımı</a>
         <a href="#izinler">İzinler</a>
         <a href="#silme">Veri silme</a>
         <a href="#iletisim">İletişim</a>
@@ -99,25 +100,48 @@
           <p>Örnek teknik bağlamlar: uygulama sürümü, cihaz segmenti, RAM/depolama aralığı, hayvan sayısı aralığı, premium durumu ve yedek durumu. Bunlar mümkün olduğunca ham kişisel içerik yerine aralık/bucket mantığıyla ele alınır.</p>
         </section>
 
+        <section class="policyBlock" id="cal-paylasim">
+          <h2>7. İsteğe bağlı anonim CAL veri paylaşımı (açık rızaya bağlı)</h2>
+          <p>Uygulama içindeki CAL asistanını geliştirmek için, <strong>yalnızca kullanıcı açıkça izin verirse</strong> çalışan isteğe bağlı bir veri paylaşımı vardır. Bu özellik <strong>varsayılan olarak kapalıdır</strong>; kapalı tutmak hiçbir özelliği veya deneme hakkını kısıtlamaz. Açma/kapama anahtarı uygulama içinde <strong>Ayarlar &gt; Gizlilik &amp; İzinler</strong> ekranındadır. Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında aydınlatma metni niteliğindedir; veri sorumlusu, İletişim bölümündeki adresten ulaşılabilen uygulama geliştiricisidir.</p>
+          <div class="tableWrap">
+            <table>
+              <thead><tr><th>Paylaşım açıksa toplananlar</th><th>Hiçbir zaman toplanmayanlar</th></tr></thead>
+              <tbody>
+                <tr><td>CAL’a yazılan soru metni (telefon numarası görünümlü ifadeler otomatik maskelenir)</td><td>Ad, e-posta, telefon numarası, konum, hesap bilgisi (uygulamada hesap yoktur)</td></tr>
+                <tr><td>CAL cevabının kısa özeti (en çok ~300 karakter), sorunun çözüldüğü konu başlığı ve sunulan yönlendirme butonlarının adları</td><td>Resmi kayıtların içeriği: aşı, sağlık, süt, satış, gebelik vb. değerler</td></tr>
+                <tr><td>Cevap kalitesine dair teknik bayraklar (ör. “soru anlaşılamadı”, “kayıt taslağı sunuldu/onaylandı/iptal edildi” — kaydın içeriği değil, yalnız sonucu)</td><td>Fotoğraflar, yedek dosyaları, notlar</td></tr>
+                <tr><td>Uygulama sürümü, paket kademesi ve rastgele üretilmiş bir kurulum kodu</td><td>Reklam veya profil oluşturma amaçlı herhangi bir veri</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Önemli:</strong> Soru metninin kendisi (örneğin hayvanlara verilen adlar geçebilir) bu paylaşımın amacıdır ve maskelenmeden iletilir. Sorulara kişisel bilgi yazılmaması önerilir. Rastgele kurulum kodu kimlik tanımlamaz; yalnızca aynı cihazdan gelen soruları gruplamaya yarar.</p>
+          <p><strong>Amaç ve hukuki sebep:</strong> Veriler yalnızca CAL’ın soru anlama ve cevap kalitesini geliştirmek amacıyla, KVKK m.5/1 uyarınca açık rızaya dayanarak işlenir. Üçüncü taraflara satılmaz, paylaşılmaz, reklam amacıyla kullanılmaz.</p>
+          <p><strong>Aktarım ve saklama:</strong> Veriler Google Firebase (Firestore) altyapısında saklanır; Google’ın sunucuları yurt dışında bulunabilir. Özelliği açmak, verilerin bu altyapıya aktarılmasına KVKK m.9 kapsamında açık rıza anlamına gelir. Ham veriye yalnızca geliştirici erişir; veriler geliştirme amacı için gerekli olduğu sürece saklanır ve amaç ortadan kalktığında silinir.</p>
+          <p><strong>Rızayı geri çekme:</strong> Ayarlar &gt; Gizlilik &amp; İzinler ekranından anahtarı kapatmak yeterlidir. Kapatıldığı anda toplama durur ve cihazda gönderilmeyi bekleyen veriler silinir. Daha önce iletilmiş verilerin silinmesi, aynı ekranda görünen kurulum kodu belirtilerek e-posta ile talep edilebilir.</p>
+          <p><strong>KVKK m.11 hakları:</strong> Kişisel verilerin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme gibi haklar için İletişim bölümündeki e-posta adresi kullanılabilir.</p>
+        </section>
+
         <section class="policyBlock">
-          <h2>7. Toplanmaması hedeflenen içerikler</h2>
+          <h2>8. Toplanmaması hedeflenen içerikler</h2>
           <ul class="clean">
             <li>Küpe numarası veya hayvan adı gibi kayıt içerikleri</li>
             <li>Özel notlar, çiftlik içi açıklamalar ve fotoğraf/yedek içeriği</li>
             <li>Destek amacı dışında e-posta veya telefon gibi doğrudan iletişim bilgileri</li>
             <li>Reklam profili oluşturma amaçlı çiftlik verisi</li>
           </ul>
+          <p>Tek istisna, Bölüm 7’de açıklanan isteğe bağlı anonim CAL veri paylaşımıdır: kullanıcı açık rıza verirse CAL’a yazdığı soru metni (içinde hayvan adı geçebilir) yalnızca o bölümdeki koşullarla iletilir.</p>
         </section>
 
         <section class="policyBlock" id="izinler">
-          <h2>8. Kullanılan izinler</h2>
+          <h2>9. Kullanılan izinler</h2>
           <div class="tableWrap">
             <table>
               <thead><tr><th>İzin / erişim</th><th>Kullanım amacı</th></tr></thead>
               <tbody>
                 <tr><td>Kamera</td><td>Fotoğraf veya küpe okuma gibi kullanıcı başlatmalı işlemler.</td></tr>
                 <tr><td>Bildirim ve alarm</td><td>Aşı, doğum, gebelik ve ajanda hatırlatmalarının zamanında çalışması.</td></tr>
-                <tr><td>İnternet</td><td>Google Drive yedekleme, Google Play abonelik kontrolü ve Firebase teknik servisleri.</td></tr>
+                <tr><td>Mikrofon</td><td>İsteğe bağlı sesli asistan özelliği; ses cihazda işlenir, kaydedilip gönderilmez.</td></tr>
+                <tr><td>İnternet</td><td>Google Drive yedekleme, Google Play abonelik kontrolü, Firebase teknik servisleri ve isteğe bağlı CAL veri paylaşımı.</td></tr>
                 <tr><td>Dosya seçici / depolama erişimi</td><td>Kullanıcının yedek dosyası seçmesi, kaydetmesi veya geri yüklemesi.</td></tr>
                 <tr><td>Ön plan veri eşitleme servisi</td><td>Uzun süren yedekleme ve geri yükleme işlemlerinin daha güvenilir tamamlanması.</td></tr>
               </tbody>
@@ -126,28 +150,28 @@
         </section>
 
         <section class="policyBlock" id="silme">
-          <h2>9. Veri saklama ve silme</h2>
+          <h2>10. Veri saklama ve silme</h2>
           <p>Uygulama içindeki kayıtlar kullanıcı tarafından silinebilir. Uygulama kaldırılırsa cihazdaki uygulama veri alanı silinebilir. Dışa aktarılmış veya telefonda/Drive’da saklanmış yedek dosyaları, saklandıkları konumda kullanıcı sorumluluğunda kalır.</p>
-          <p>Google Drive yedekleri kullanıcı tarafından Drive üzerinden yönetilebilir. Firebase teknik tanılama verilerinin saklama ve silme süreçleri Google/Firebase veri işleme politikalarına bağlı olabilir.</p>
+          <p>Google Drive yedekleri kullanıcı tarafından Drive üzerinden yönetilebilir. Firebase teknik tanılama verilerinin saklama ve silme süreçleri Google/Firebase veri işleme politikalarına bağlı olabilir. İsteğe bağlı CAL veri paylaşımının silme süreci Bölüm 7’de açıklanmıştır.</p>
         </section>
 
         <section class="policyBlock">
-          <h2>10. Çocukların gizliliği</h2>
+          <h2>11. Çocukların gizliliği</h2>
           <p>Çiftlik Ajandası genel olarak çiftlik ve işletme kayıtları için tasarlanmıştır. Çocuklara yönelik özel bir hizmet olarak tasarlanmamıştır.</p>
         </section>
 
         <section class="policyBlock">
-          <h2>11. Güvenlik</h2>
+          <h2>12. Güvenlik</h2>
           <p>Uygulama, veri kaybını azaltmak için yedekleme ve geri yükleme akışlarında kontrollü davranmayı hedefler. Buna rağmen telefon arızası, yanlış dosya seçimi, uygulama kaldırma veya kullanıcı tarafından yedek silme gibi durumlarda güncel yedek saklamak kritik önemdedir.</p>
         </section>
 
         <section class="policyBlock">
-          <h2>12. Politika değişiklikleri</h2>
-          <p>Uygulama özellikleri, Google Play gereklilikleri veya kullanılan teknik servisler değişirse bu politika güncellenebilir. En güncel sürüm bu sayfada yayınlanır.</p>
+          <h2>13. Politika değişiklikleri</h2>
+          <p>Uygulama özellikleri, Google Play gereklilikleri veya kullanılan teknik servisler değişirse bu politika güncellenebilir. En güncel sürüm bu sayfada yayınlanır. Veri toplamayı genişleten bir değişiklik, uygulama içinde yeniden rıza alınmadan yürürlüğe konmaz.</p>
         </section>
 
         <section class="policyBlock" id="iletisim">
-          <h2>13. İletişim</h2>
+          <h2>14. İletişim</h2>
           <p>Gizlilik, yedekleme, abonelik veya destek konuları için <a href="mailto:ciftlikajandasi@gmail.com">ciftlikajandasi@gmail.com</a> adresine yazabilirsin. Instagram destek hesabı: <a href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">@ciftlikajandasi_surutakip</a>.</p>
         </section>
       </div>
