@@ -7,12 +7,56 @@
   <meta name="robots" content="noindex"/>
   <meta name="theme-color" content="#0f5b2b"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/app.css"/>
 </head>
 <body>
-<header class="topbar"><div class="wrap topbarInner"><a class="brand" href="./"><img class="brandIcon" src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/><div><div class="brandName">Çiftlik Ajandası</div><div class="brandTag">Sayfa bulunamadı.</div></div></a><div class="actions"><button class="iconBtn" id="themeBtn" type="button" aria-label="Tema değiştir">☾</button><a class="pill primary" href="index.html">Ana sayfa</a></div></div></header>
-<main id="main"><section class="hero"><div class="wrap"><div class="badgeRow"><span class="badge">404</span></div><h1>Bu sayfa bulunamadı.</h1><p class="lead">Aradığın bağlantı değişmiş olabilir. Ana sayfaya, gizlilik politikasına veya destek sayfasına dönebilirsin.</p><div class="heroCtas"><a class="pill primary" href="index.html">Ana sayfa</a><a class="pill" href="privacy.html">Gizlilik</a><a class="pill" href="support.html">Destek</a><a class="pill ghost" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play</a></div></div></section></main>
-<footer class="footer"><div class="wrap footerGrid"><div>© 2026 Çiftlik Ajandası</div></div></footer>
-<script src="assets/js/main.js" defer></script>
+<header class="articleTop">
+  <div class="wrap articleTopInner">
+    <a class="backLink" href="index.html">‹ Çiftlik Ajandası</a>
+    <div class="actions" style="margin-left:auto">
+      <button class="iconBtn" id="themeBtn" type="button" aria-label="Temayı değiştir"><span class="themeGlyph">☾</span></button>
+      <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play</a>
+    </div>
+  </div>
+</header>
+
+<main class="articleWrap">
+  <article class="article">
+    <div class="badgeRow"><span class="badge">404</span></div>
+    <h1>Bu sayfa bulunamadı.</h1>
+    <p class="articleLead">Aradığın bağlantı değişmiş olabilir. Ana sayfaya, gizlilik politikasına veya destek sayfasına dönebilirsin.</p>
+    <div class="articleCta">
+      <a class="pill primary" href="index.html">Ana sayfa</a>
+      <a class="pill ghost" href="privacy.html">Gizlilik</a>
+      <a class="pill ghost" href="support.html">Destek</a>
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footerGrid">
+    <div class="footerBrand">
+      <img src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/>
+      <div>
+        <strong>Çiftlik Ajandası</strong>
+        <span>CAL ile sade, güvenilir sürü yönetimi.</span>
+      </div>
+    </div>
+    <div class="footerLinks">
+      <a href="privacy.html">Gizlilik</a>
+      <a href="terms.html">Abonelik Şartları</a>
+      <a href="support.html">Destek</a>
+      <a href="beta.html">Test Programı</a>
+      <a href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="wrap footerBase">© 2026 Çiftlik Ajandası · Tüm hakları saklıdır.</div>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
 </body>
 </html>

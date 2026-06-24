@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Çiftlik Ajandası — Sürü Takibi, Ajanda ve Güvenli Yedekleme</title>
-  <meta name="description" content="Çiftlik Ajandası; hayvan kayıtları, akıllı dashboard, küpe okuma, aşı-doğum takibi, süt-yem-satış modülleri ve kullanıcı kontrollü yedekleme sunan Android uygulamasıdır."/>
+  <title>Çiftlik Ajandası — CAL ile çiftliğini hatırlayan dijital yoldaş</title>
+  <meta name="description" content="Çiftlik Ajandası, içinde CAL adlı dijital yoldaşı barındıran sürü yönetimi uygulaması. Hayvan kayıtları, akıllı uyarılar, sağlık-aşı-doğum takibi, süt-yem-satış ve güvenli yedekleme — zor anında yanında, akademik kaynaklı, veri uydurmayan bir asistanla."/>
   <link rel="canonical" href="https://alibedirhan.github.io/ciftlikajandasi/"/>
   <meta name="theme-color" content="#0f5b2b"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
@@ -13,15 +13,20 @@
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="tr_TR"/>
   <meta property="og:site_name" content="Çiftlik Ajandası"/>
-  <meta property="og:title" content="Çiftlik Ajandası — Sürü takibi tek yerde"/>
-  <meta property="og:description" content="Hayvan kayıtları, ajanda, uyarılar, küpe okuma, sağlık takibi ve güvenli yedekleme."/>
+  <meta property="og:title" content="Çiftlik Ajandası — CAL ile yanında"/>
+  <meta property="og:description" content="Çiftliğini hatırlayan, zor anında yanında olan dijital yoldaş CAL ile sürü yönetimi."/>
   <meta property="og:url" content="https://alibedirhan.github.io/ciftlikajandasi/"/>
   <meta property="og:image" content="https://alibedirhan.github.io/ciftlikajandasi/assets/img/og-image-v2.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Çiftlik Ajandası — Sürü takibi tek yerde"/>
-  <meta name="twitter:description" content="Hayvan kayıtları, ajanda, uyarılar, küpe okuma, sağlık takibi ve güvenli yedekleme."/>
+  <meta name="twitter:title" content="Çiftlik Ajandası — CAL ile yanında"/>
+  <meta name="twitter:description" content="Çiftliğini hatırlayan, zor anında yanında olan dijital yoldaş CAL."/>
   <meta name="twitter:image" content="https://alibedirhan.github.io/ciftlikajandasi/assets/img/og-image-v2.png"/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/app.css"/>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,7 +34,7 @@
     "name": "Çiftlik Ajandası",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Android",
-    "description": "Hayvan kayıtları, ajanda, uyarılar, küpe okuma, sağlık takibi ve kullanıcı kontrollü yedekleme için Android uygulaması.",
+    "description": "İçinde CAL adlı dijital yoldaşı barındıran sürü yönetimi uygulaması. Hayvan kayıtları, akıllı uyarılar, sağlık takibi ve güvenli yedekleme.",
     "url": "https://alibedirhan.github.io/ciftlikajandasi/",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi",
     "publisher": { "@type": "Organization", "name": "Çiftlik Ajandası" }
@@ -37,204 +42,391 @@
   </script>
 </head>
 <body>
+<div class="scrollProgress" id="scrollProgress" aria-hidden="true"></div>
 <a class="skip" href="#main">İçeriğe atla</a>
-<header class="topbar">
+
+<header class="topbar" id="topbar">
   <div class="wrap topbarInner">
-    <a class="brand" href="./" aria-label="Çiftlik Ajandası ana sayfa">
+    <a class="brand" href="index.html" aria-label="Çiftlik Ajandası ana sayfa">
       <img class="brandIcon" src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/>
       <div class="brandText">
-        <div class="brandName">Çiftlik Ajandası</div>
-        <div class="brandTag">Sürü takibi, ajanda ve yedekleme.</div>
+        <span class="brandName">Çiftlik Ajandası</span>
+        <span class="brandTag">CAL ile sürü yönetimi</span>
       </div>
     </a>
     <nav class="nav" aria-label="Ana menü">
+      <a class="navLink" href="#cal">CAL</a>
       <a class="navLink" href="#ozellikler">Özellikler</a>
       <a class="navLink" href="#ekranlar">Ekranlar</a>
+      <a class="navLink" href="#guven">Güven</a>
       <a class="navLink" href="#planlar">Planlar</a>
       <a class="navLink" href="#sss">SSS</a>
-      <a class="navLink" href="privacy.html">Gizlilik</a>
-      <a class="navLink" href="support.html">Destek</a>
     </nav>
     <div class="actions">
-      <button class="iconBtn" id="themeBtn" type="button" aria-label="Tema değiştir">☾</button>
-      <a class="pill ghost" href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">Instagram</a>
-      <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play</a>
+      <button class="iconBtn" id="themeBtn" type="button" aria-label="Temayı değiştir" title="Aydınlık / karanlık">
+        <span class="themeGlyph" aria-hidden="true">☾</span>
+      </button>
+      <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M3.6 2.3c-.3.3-.5.7-.5 1.3v16.8c0 .6.2 1 .5 1.3l.1.1 9.4-9.4v-.2L3.6 2.3Zm12.7 12.6-3-3 3-3 3.6 2.1c1 .6 1 1.6 0 2.2l-3.6 1.7Zm-.6.6-3.1-3.1-9.1 9.1c.4.3.9.3 1.5 0l10.7-6Zm-12.2-21 9.1 9.1 3.1-3.1L5.9.6c-.6-.3-1.1-.3-1.6 0Z"/></svg>
+        Google Play
+      </a>
+      <button class="iconBtn menuBtn" id="menuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
     </div>
   </div>
+  <nav class="mobileNav" id="mobileNav" aria-label="Mobil menü">
+    <a href="#cal">CAL</a>
+    <a href="#ozellikler">Özellikler</a>
+    <a href="#ekranlar">Ekranlar</a>
+    <a href="#guven">Güven</a>
+    <a href="#planlar">Planlar</a>
+    <a href="#sss">SSS</a>
+    <a href="privacy.html">Gizlilik</a>
+    <a href="support.html">Destek</a>
+  </nav>
 </header>
 
 <main id="main">
+
+  <!-- ============== HERO ============== -->
   <section class="hero">
+    <div class="heroBg" aria-hidden="true"></div>
     <div class="wrap heroGrid">
-      <div class="heroCopy">
-        <div class="badgeRow" aria-label="Ürün öne çıkanları">
-          <span class="badge">15 hayvana kadar ücretsiz</span>
-          <span class="badge">Yıllık kapasite planları</span>
-          <span class="badge">Yerel + Drive yedekleme</span>
-          <span class="badge">Küpe okuma</span>
-        </div>
-        <h1>Çiftlik işlerini <span class="accent">tek ajandada</span> yönet.</h1>
-        <p class="lead">Hayvan kayıtları, akıllı dashboard, uyarılar, küpe okuma, sağlık takibi, gebelik-doğum süreçleri, süt-yem-satış kayıtları ve güvenli yedekleme tek yerde.</p>
+      <div class="heroCopy reveal">
+        <span class="eyebrow"><span class="dot"></span> Android için sürü yönetimi · içinde CAL var</span>
+        <h1>Çiftliğini hatırlayan, <span class="accent">zor anında yanında</span> olan dijital yoldaş.</h1>
+        <p class="lead">Çiftlik Ajandası yalnız kayıt tutmaz. İçindeki <strong>CAL</strong>, kayıtlarını okur, gözden kaçanı söyler, doğru işe yönlendirir; acil bir durumda hayvanını hayatta tutmak için yanı başında durur. Veteriner değildir, onun yerini tutmaz — ama seni hiç yalnız bırakmaz.</p>
         <div class="heroCtas">
-          <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play’den aç</a>
-          <a class="pill" href="#ekranlar">Ekranları gör</a>
-          <a class="pill ghost" href="support.html">Destek al</a>
+          <a class="pill primary lg" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play’den indir</a>
+          <a class="pill ghost lg" href="#cal">CAL nasıl çalışır?</a>
         </div>
-        <p class="note heroNote"><strong>Net bilgi:</strong> Güncel fiyat ve ödeme onayı Google Play ödeme ekranında gösterilir. Abonelik yönetimi Google Play hesabı üzerinden yapılır.</p>
-        <div class="trust" aria-label="Güven bilgileri">
-          <div class="trustItem"><div class="trustTitle">Veriler cihazda</div><div class="trustSub">Hayvan kayıtları varsayılan olarak telefonda tutulur.</div></div>
-          <div class="trustItem"><div class="trustTitle">Yedekleme kontrol sende</div><div class="trustSub">Yerel yedek ve isteğe bağlı Google Drive akışı.</div></div>
-          <div class="trustItem"><div class="trustTitle">Saha dostu arayüz</div><div class="trustSub">Kısa metin, net aksiyon, hızlı kullanım.</div></div>
-        </div>
+        <ul class="heroPoints">
+          <li><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M16.7 5.3 8 14 3.3 9.3l1.4-1.4L8 11.2l7.3-7.3 1.4 1.4Z" fill="currentColor"/></svg> 15 hayvana kadar ücretsiz</li>
+          <li><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M16.7 5.3 8 14 3.3 9.3l1.4-1.4L8 11.2l7.3-7.3 1.4 1.4Z" fill="currentColor"/></svg> İnternetsiz çalışır</li>
+          <li><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M16.7 5.3 8 14 3.3 9.3l1.4-1.4L8 11.2l7.3-7.3 1.4 1.4Z" fill="currentColor"/></svg> Verilerin cihazında</li>
+        </ul>
       </div>
-      <div class="heroMedia">
-        <aside class="heroShowcase" aria-label="Çiftlik Ajandası ürün ön izlemesi">
-          <div class="showcaseHeader">
-            <img class="showcaseIcon" src="assets/img/app_icon_v2.png" alt="Çiftlik Ajandası uygulama ikonu" loading="eager" decoding="async"/>
-            <div>
-              <p class="showcaseEyebrow">Android için güncel sürü takip uygulaması</p>
-              <h2>Çiftlik Ajandası</h2>
-              <p>Ajanda, kayıt, uyarı ve yedekleme akışlarını tek merkezde toparlar.</p>
-            </div>
-          </div>
 
-          <div class="showcaseBadges" aria-label="Öne çıkan kullanım alanları">
-            <span>15 ücretsiz</span>
-            <span>Drive yedek</span>
-            <span>Küpe okuma</span>
-            <span>360° profil</span>
+      <div class="heroMedia reveal">
+        <div class="phone" role="img" aria-label="CAL ile örnek bir sohbet: yavru ishali için ilk yardım">
+          <div class="phoneNotch" aria-hidden="true"></div>
+          <div class="phoneScreen">
+            <div class="calHeader">
+              <span class="calAvatar" aria-hidden="true">🌱</span>
+              <div class="calHeadText">
+                <strong>CAL</strong>
+                <span>çiftlik yoldaşın · çevrimiçi</span>
+              </div>
+            </div>
+            <div class="chat" id="calChat">
+              <!-- Sahne 1 — kriz yoldaşlığı -->
+              <div class="calScene active" data-scene="0">
+                <div class="msg user"><p>Sarıkız'ın buzağısı sulu ishal oldu, ne yapayım?</p></div>
+                <div class="msg cal cal2">
+                  <p><strong>Önce sakin ol, yanındayım.</strong> Yavruyu kuru ve sıcak tut; su kaybı en büyük risk.</p>
+                  <p>Hazır oral elektroliti (ORS) ılık ve az az, sık ver; emiyorsa sütü kesme.</p>
+                  <p class="calRed">⚠️ Ayağa kalkamıyor ya da emmiyorsa bekleme — veterinerini ara.</p>
+                  <div class="chips">
+                    <span class="chip">📋 Veteriner özeti (PDF)</span>
+                    <span class="chip">📖 Detaylı oku</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Sahne 2 — proaktif sabah brifi -->
+              <div class="calScene" data-scene="1">
+                <div class="msg user"><p>Günaydın CAL, bugün ne yapmalıyım?</p></div>
+                <div class="msg cal cal2">
+                  <p><strong>Günaydın!</strong> Bugün öne çıkan 3 başlık var:</p>
+                  <p>• 2 hayvanın aşısı yaklaştı<br/>• 1 doğum penceresi açıldı<br/>• 1 ilacın son kullanma tarihi geçmiş</p>
+                  <div class="chips">
+                    <span class="chip">🗓️ Ajandayı aç</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Sahne 3 — veri / analiz -->
+              <div class="calScene" data-scene="2">
+                <div class="msg user"><p>Sütler nasıl gidiyor?</p></div>
+                <div class="msg cal cal2">
+                  <p>Son hafta sürü ortalaman <strong>%12 düşük</strong>. En çok düşüş Karabaş ve Benekli'de.</p>
+                  <p>Yem değişimi ya da gizli meme sorunu olabilir — birlikte bakalım.</p>
+                  <div class="chips">
+                    <span class="chip">🥛 Süt detayını gör</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sceneDots" id="sceneDots" aria-hidden="true">
+              <span class="active"></span><span></span><span></span>
+            </div>
+            <div class="calInput" aria-hidden="true">
+              <span>CAL'a yaz…</span>
+              <span class="micDot">🎙️</span>
+            </div>
           </div>
-
-          <div class="previewGrid" aria-label="Uygulama ekran ön izlemeleri">
-            <div class="phoneShot mainShot">
-              <img src="assets/screenshots/full/03-akilli-dashboard.webp" alt="Çiftlik Ajandası akıllı dashboard ekranı" loading="eager" decoding="async"/>
-            </div>
-            <div class="phoneShot">
-              <img src="assets/screenshots/full/07-hayvan-listesi.webp" alt="Çiftlik Ajandası hayvan listesi ekranı" loading="eager" decoding="async"/>
-            </div>
-            <div class="phoneShot">
-              <img src="assets/screenshots/full/08-360-hayvan-profili.webp" alt="Çiftlik Ajandası 360 derece hayvan profili ekranı" loading="eager" decoding="async"/>
-            </div>
-          </div>
-
-          <div class="showcaseFooter">
-            <div>
-              <strong>Net kullanım</strong>
-              <span>Günlük işler, uyarılar ve kayıtlar okunaklı kartlarla sunulur.</span>
-            </div>
-            <a class="showcaseLink" href="#ekranlar">Tüm ekranları gör</a>
-          </div>
-        </aside>
+        </div>
+        <div class="heroFloat f1" aria-hidden="true">🔔 Bugün 2 aşı, 1 doğum penceresi</div>
+        <div class="heroFloat f2" aria-hidden="true">🥛 Süt son haftada %12 düşük</div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="ozellikler">
+  <!-- ============== TRUST BAR ============== -->
+  <section class="trustBar">
+    <div class="wrap trustBarInner reveal">
+      <div class="tb"><strong>Yerel-birincil</strong><span>Kayıtların telefonunda, senin kontrolünde.</span></div>
+      <div class="tb"><strong>Akademik kaynaklı</strong><span>Bilgi; Bakanlık ve üniversite kaynaklarına dayanır.</span></div>
+      <div class="tb"><strong>Veri uydurmaz</strong><span>Bilmiyorsa “bilmiyorum” der, seni doğru adıma taşır.</span></div>
+      <div class="tb"><strong>Saha dostu</strong><span>Kısa metin, net aksiyon, hızlı kullanım.</span></div>
+    </div>
+  </section>
+
+  <!-- ============== CAL SECTION ============== -->
+  <section class="section" id="cal">
     <div class="wrap">
-      <div class="sectionHead">
-        <h2>Çiftçinin ihtiyacı olan temel akışlar</h2>
-        <p>Abartılı vaat yok. Uygulamada bulunan işlevleri sade ve güvenilir şekilde anlatıyoruz.</p>
+      <div class="sectionHead center reveal">
+        <span class="kicker">CAL — uygulamanın kalbi</span>
+        <h2>Jarvis gibi, ama çiftlik için.</h2>
+        <p>CAL uygulamanın içinde yaşar. Ne yaparsan bilir, yorumlar, proaktif uyarır ve seni doğru işe götürür. Tek seferlik bir cevap makinesi değil — sürünü zaman içinde tanıyan bir yoldaş.</p>
+      </div>
+
+      <div class="calGrid">
+        <article class="calCard reveal">
+          <div class="calCardIcon">🌅</div>
+          <h3>Sabah brifin hazır</h3>
+          <p>Gününe bakar: yaklaşan aşı ve doğum, son kullanma tarihi geçen ilaç, biten yem stoğu, kuruya çıkarma zamanı — sen sormadan söyler.</p>
+        </article>
+        <article class="calCard reveal">
+          <div class="calCardIcon">🚑</div>
+          <h3>Krizde yalnız bırakmaz</h3>
+          <p>Süt humması, ishal, zor doğum gibi acil anlarda ilaçsız ilk yardımı adım adım söyler, “veterineri aradın mı?” diye seni takip eder — uygulamadan çıksan bile hatırlatır.</p>
+        </article>
+        <article class="calCard reveal">
+          <div class="calCardIcon">🧠</div>
+          <h3>Hatırlar ve örüntü görür</h3>
+          <p>“Geçen yıl da mastitis geçirmişti” gibi tekrarları fark eder, gözden kaçanı yakalar. Kararı sana bırakır; o yol gösterir.</p>
+        </article>
+        <article class="calCard reveal">
+          <div class="calCardIcon">📋</div>
+          <h3>İşi senin yerine kolaylaştırır</h3>
+          <p>Veteriner özeti ve ırk/soy beyanı PDF’lerini tek dokunuşla hazırlar, protokolleri ajandana yazar — ama onayı hep sen verirsin.</p>
+        </article>
+        <article class="calCard reveal">
+          <div class="calCardIcon">🎙️</div>
+          <h3>Sesle konuşur</h3>
+          <p>Eller meşgulken sor, dinle. “KAL, bugün ne yapmalıyım?” de yeter; cevabı kendi sesiyle okur.</p>
+        </article>
+        <article class="calCard reveal">
+          <div class="calCardIcon">🔒</div>
+          <h3>Sınırlarını bilir</h3>
+          <p>Veteriner değildir; teşhis, ilaç ve doz vermez. Tehlikeli olanı yapmaz — onun yerine seni doğru yere yönlendirir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FEATURES ============== -->
+  <section class="section alt" id="ozellikler">
+    <div class="wrap">
+      <div class="sectionHead reveal">
+        <span class="kicker">Modüller</span>
+        <h2>Çiftliğin tamamı tek ajandada</h2>
+        <p>Abartılı vaat yok. Uygulamada gerçekten bulunan işlevleri sade ve güvenilir biçimde anlatıyoruz.</p>
       </div>
       <div class="cards4">
-        <article class="card"><div class="cardIcon">🐄</div><h3>Hayvan kayıtları</h3><p>Küpe, tür, grup, not ve geçmiş bilgilerini düzenli tut.</p></article>
-        <article class="card"><div class="cardIcon">📊</div><h3>Akıllı dashboard</h3><p>Bugünün işleri, kritik uyarılar ve hızlı aksiyonlar tek ekranda.</p></article>
-        <article class="card"><div class="cardIcon">🔎</div><h3>Küpe okuma</h3><p>Kamera destekli okuma akışıyla kayıt bulmayı hızlandır.</p></article>
-        <article class="card"><div class="cardIcon">🩺</div><h3>Sağlık & aşı</h3><p>Aşı, sağlık, gebelik ve doğum takiplerini ajandaya bağla.</p></article>
-        <article class="card soft"><div class="cardIcon">🥛</div><h3>Süt, yem, satış</h3><p>Günlük işletme kayıtlarını ayrı ayrı takip et.</p></article>
-        <article class="card soft"><div class="cardIcon">🧬</div><h3>Damızlık & genetik</h3><p>Sürü geçmişini daha anlamlı kararlar için düzenle.</p></article>
-        <article class="card soft"><div class="cardIcon">🧾</div><h3>Raporlar</h3><p>Kayıtlarını daha okunur özetlere dönüştür.</p></article>
-        <article class="card soft"><div class="cardIcon">☁️</div><h3>Güvenli yedekleme</h3><p>Yerel yedek al, telefona kaydet veya isteğe bağlı Drive kullan.</p></article>
+        <article class="card reveal"><div class="cardIcon">🐄</div><h3>Hayvan kayıtları</h3><p>Küpe, tür, grup, not ve 360° geçmiş bilgisini düzenli tut.</p></article>
+        <article class="card reveal"><div class="cardIcon">📊</div><h3>Akıllı panel</h3><p>Bugünün işleri, kritik uyarılar ve hızlı aksiyonlar tek ekranda.</p></article>
+        <article class="card reveal"><div class="cardIcon">🩺</div><h3>Sağlık & aşı</h3><p>Aşı, sağlık, gebelik ve doğum takiplerini ajandaya bağla.</p></article>
+        <article class="card reveal"><div class="cardIcon">🍼</div><h3>Doğum & yavru</h3><p>Gebelikten doğuma, yavru kaydından soy bağına kadar tek akış.</p></article>
+        <article class="card reveal"><div class="cardIcon">🥛</div><h3>Süt, yem, satış</h3><p>Günlük işletme kayıtlarını tutar, gidişatı CAL yorumlar.</p></article>
+        <article class="card reveal"><div class="cardIcon">🔎</div><h3>Küpe okuma</h3><p>Kamera destekli okuma ve hızlı elle giriş ile kayıt bulmayı hızlandır.</p></article>
+        <article class="card reveal"><div class="cardIcon">🧬</div><h3>Damızlık & genetik</h3><p>Irk/soy beyanı ve çiftleştirme danışmanlığıyla daha iyi kararlar.</p></article>
+        <article class="card reveal"><div class="cardIcon">☁️</div><h3>Güvenli yedekleme</h3><p>Yerel yedek al, telefona kaydet veya isteğe bağlı Google Drive kullan.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap infoGrid">
-      <div class="infoPanel">
-        <h2>Veri tarafında çizgi net</h2>
-        <p>Hayvan kayıtları, küpe numaraları, notlar ve çiftlik içerikleri geliştirici sunucusunda tutulmak üzere tasarlanmamıştır.</p>
-        <ul class="clean">
-          <li>Yedekleme kullanıcı tarafından başlatılır.</li>
-          <li>Google Drive kullanılırsa Google servisleri devreye girer.</li>
-          <li>Teknik tanılama için Firebase servisleri kullanılabilir.</li>
-        </ul>
-      </div>
-      <div class="infoPanel">
-        <h2>Uygun planı seç, kapasiteni büyüt</h2>
-        <p>Ücretsiz kullanım 15 hayvana kadar başlar. İhtiyaç arttığında Google Play üzerinden yıllık kapasite planına geçebilirsin.</p>
-        <ul class="clean">
-          <li>Fiyat bilgisi web sayfasında sabitlenmez.</li>
-          <li>Ödeme, iptal ve yenileme Google Play üzerinden yönetilir.</li>
-          <li>Plan limitleri uygulama içindeki aktif haklara göre uygulanır.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
+  <!-- ============== SCREENS ============== -->
   <section class="section" id="ekranlar">
     <div class="wrap">
-      <div class="sectionHead row">
+      <div class="sectionHead row reveal">
         <div>
-          <h2>Güncel ekran görüntüleri</h2>
-          <p>Play Store için hazırlanan güncel uygulama ekranları kullanıldı.</p>
+          <span class="kicker">Ekranlar</span>
+          <h2>Uygulamadan görüntüler</h2>
+          <p>Sahadaki çiftçi için tasarlanmış sade, hızlı ve okunaklı arayüz.</p>
         </div>
-        <button class="pill" id="openGallery" type="button">Galeriyi aç</button>
+        <button class="pill ghost" id="openGallery" type="button">Galeriyi aç</button>
       </div>
       <div class="shotsRail" role="list" aria-label="Çiftlik Ajandası ekran görüntüleri">
-        <button class="shot" type="button" data-full="assets/screenshots/full/01-kolay-baslangic.webp"><img src="assets/screenshots/thumb/01-kolay-baslangic.webp" alt="Kolay başlangıç ekranı ve işletme bilgileri" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/02-tum-moduller.webp"><img src="assets/screenshots/thumb/02-tum-moduller.webp" alt="Çiftlik Ajandası tüm modüller ekranı" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/03-akilli-dashboard.webp"><img src="assets/screenshots/thumb/03-akilli-dashboard.webp" alt="Akıllı dashboard ve kritik uyarılar" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/04-uyari-sistemi.webp"><img src="assets/screenshots/thumb/04-uyari-sistemi.webp" alt="Aşı ve doğum odaklı uyarı sistemi" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/05-asi-takibi.webp"><img src="assets/screenshots/thumb/05-asi-takibi.webp" alt="Aşı takip listesi" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/06-gebelik-takibi.webp"><img src="assets/screenshots/thumb/06-gebelik-takibi.webp" alt="Gebelik ve doğum takip listesi" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/07-hayvan-listesi.webp"><img src="assets/screenshots/thumb/07-hayvan-listesi.webp" alt="Küpe numarası ile hayvan listesi" loading="lazy" decoding="async"/></button>
-        <button class="shot" type="button" data-full="assets/screenshots/full/08-360-hayvan-profili.webp"><img src="assets/screenshots/thumb/08-360-hayvan-profili.webp" alt="360 derece hayvan profili ve detay kartları" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/01-cal.webp"><img src="assets/screenshots/thumb/01-cal.webp" alt="CAL sabah brifi: günün öne çıkan işlerini özetliyor" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/02-cal-kriz.webp"><img src="assets/screenshots/thumb/02-cal-kriz.webp" alt="CAL kriz yoldaşı: buzağı ishalinde ilk yardım (sağlık modu)" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/03-panel.webp"><img src="assets/screenshots/thumb/03-panel.webp" alt="Akıllı panel: toplam hayvan, bugünün ajandası ve aşı uyarıları" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/04-suru.webp"><img src="assets/screenshots/thumb/04-suru.webp" alt="Sürü listesi: küpe numarası, tür ve durum filtreleri" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/05-profil.webp"><img src="assets/screenshots/thumb/05-profil.webp" alt="360 derece hayvan profili: durum özeti, aşı, üreme, süt ve tartım" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/06-asi.webp"><img src="assets/screenshots/thumb/06-asi.webp" alt="Aşı takibi: geciken ve yaklaşan aşı uyarıları" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/09-gebelikler.webp"><img src="assets/screenshots/thumb/09-gebelikler.webp" alt="Üreme: gebelik ve doğum takibi" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/11-sut-gunluk.webp"><img src="assets/screenshots/thumb/11-sut-gunluk.webp" alt="Süt takibi: günlük üretim ve 30 günlük özet" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/14-yem-rasyon.webp"><img src="assets/screenshots/thumb/14-yem-rasyon.webp" alt="Yem ve rasyon: stok takibi ve kritik seviye uyarısı" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/16-kupe-okuma.webp"><img src="assets/screenshots/thumb/16-kupe-okuma.webp" alt="Küpe okuma: kamera veya galeriden küpe numarası okuma" loading="lazy" decoding="async"/></button>
+        <button class="shot reveal" type="button" data-full="assets/screenshots/full/17-ajanda.webp"><img src="assets/screenshots/thumb/17-ajanda.webp" alt="Ajanda: takvim ve günlük plan" loading="lazy" decoding="async"/></button>
+      </div>
+      <p class="note center">Uygulamanın güncel sürümünden gerçek ekran görüntüleri.</p>
+    </div>
+  </section>
+
+  <!-- ============== TRANSPARENCY / TRUST ============== -->
+  <section class="section alt" id="guven">
+    <div class="wrap">
+      <div class="sectionHead center reveal">
+        <span class="kicker">Şeffaflık</span>
+        <h2>Güven, şeffaflıkla başlar</h2>
+        <p>CAL'ın vizyonu net: çiftçinin yanında, hayvan refahını <em>ve</em> seni düşünen bir yoldaş olmak. Ne yaptığını, ne yapmadığını ve bilgisini nereden aldığını açıkça paylaşıyoruz — güven ancak böyle kurulur.</p>
+      </div>
+
+      <div class="infoGrid">
+        <div class="infoPanel reveal">
+          <span class="kicker">Vizyon & misyon</span>
+          <h2>Yalnız kayıt değil, yoldaşlık</h2>
+          <p>CAL bir “cevap makinesi” değil; çiftliğini zaman içinde tanıyan bir yoldaş. Amacı tek: hayvanın refahı ve senin işini kolaylaştırmak.</p>
+          <ul class="clean">
+            <li>Sen unuttuğunda hatırlar, ters gittiğinde ilk fark eden o olur.</li>
+            <li>Ham rapor değil; neden–sonuç ve önlem üretir.</li>
+            <li>Kritik anda hayvanı hayatta tutmak için yanında durur, seni doğru adıma taşır.</li>
+            <li>Karar hep sende; CAL yol gösterir, yerine geçmez.</li>
+          </ul>
+        </div>
+        <div class="infoPanel accentPanel reveal">
+          <span class="kicker">CAL'ın kırmızı çizgileri</span>
+          <h2>Ne yapmadığını da bilmelisin</h2>
+          <p>Güvenebilmen için CAL'ın sınırları nettir:</p>
+          <ul class="clean check">
+            <li>Veteriner değildir; teşhis, ilaç veya doz vermez.</li>
+            <li>Veri uydurmaz; kayıt yoksa “yok” der.</li>
+            <li>Senin yerine sessizce resmî kayıt yazmaz — taslağı hazırlar, onayı sen verirsin.</li>
+            <li>Bilgi yalnız bilimsel/resmî kaynaklara dayanır; ispatlanamayan şeyi söylemez.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="infoGrid" style="margin-top:24px">
+        <div class="infoPanel reveal">
+          <span class="kicker">Veri & gizlilik</span>
+          <h2>Veri tarafında çizgi net</h2>
+          <p>Hayvan kayıtların, küpe numaraların ve notların bu telefonda, uygulamanın kendi veritabanında durur. CAL cevaplarını da cihazın içinde üretir.</p>
+          <ul class="clean">
+            <li>Verilerini kimseye satmayız, reklam için kullanmayız.</li>
+            <li>Yedekleme ve ekip paylaşımı yalnız sen açarsan çalışır.</li>
+            <li>Google Drive kullanırsan yalnızca Google servisleri devreye girer.</li>
+            <li>Canlı hava için yalnız il/ilçe bilgisi sorgulanır; hayvan kayıtların gönderilmez.</li>
+          </ul>
+        </div>
+        <div class="infoPanel reveal">
+          <span class="kicker">Bilgi kaynakları</span>
+          <h2>Her tavsiyenin arkasında bir kaynak var</h2>
+          <p>CAL'ın sağlık ve bakım bilgisi akademik yayınlara ve Bakanlık belgelerine dayanır. Doğruladığımız başlıca kaynaklar:</p>
+          <ul class="clean sources">
+            <li><a href="https://www.tarimorman.gov.tr/HAYGEM/Belgeler/Hayvancılık/Büyükbaş%20Hayvancılık/2017%20Yılı/Buzağı%20Bakım%20ve%20Beslenmesi.pdf" target="_blank" rel="noopener">T.C. Tarım ve Orman Bakanlığı (HAYGEM) — <em>Buzağı Bakım ve Beslenmesi</em>, 2017</a> · ağız sütü (kolostrum) zamanlaması ve miktarı</li>
+            <li><a href="https://dergipark.org.tr/tr/download/article-file/144621" target="_blank" rel="noopener">Cengiz, F. — <em>İneklerde Süt Hummasına İlişkin Metabolik Bozukluklar</em>, Uludağ Üniv. Vet. Fak. Dergisi, 2001</a> · süt humması</li>
+            <li><a href="https://www.msdvetmanual.com/metabolic-disorders/parturient-paresis-in-ruminants/parturient-paresis-in-cows" target="_blank" rel="noopener">MSD Veteriner El Kitabı — <em>Parturient Paresis in Cows</em></a> · sternal yatış ve aspirasyon riski</li>
+          </ul>
+          <p class="note">Kaynak listesi doğrulandıkça genişler. İlgili mevzuat: İhbarı Mecburi Hayvan Hastalıkları ve Veteriner Tıbbi Ürünler yönetmelikleri. Uygulama içindeki <strong>CAL Şeffaflık Raporu</strong> tam listeyi PDF olarak da sunar.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="planlar">
+  <!-- ============== ARTICLES ============== -->
+  <section class="section" id="makaleler">
     <div class="wrap">
-      <div class="sectionHead">
-        <h2>Kapasite planları</h2>
-        <p>Planlar Google Play üzerinden yıllık abonelik olarak yönetilir. Güncel fiyat Google Play ödeme ekranında görünür.</p>
+      <div class="sectionHead center reveal">
+        <span class="kicker">Bilgi</span>
+        <h2>Çiftçinin yanında, doğru bilgiyle</h2>
+        <p>Akademik ve resmî kaynaklara dayanan kısa rehberler. CAL'ın bilgisi de aynı kaynaklara dayanır; uygulama içinden ilgili rehberi tek dokunuşla açabilirsin.</p>
+      </div>
+      <div class="cards3">
+        <a class="articleCard reveal" href="makale/agiz-sutu-kolostrum.html">
+          <span class="articleTag">Yenidoğan bakımı</span>
+          <h3>Buzağıda ilk saatler: ağız sütü neden hayat kurtarır?</h3>
+          <p>Kolostrumun zamanlaması, miktarı ve kalitesi — Bakanlık HAYGEM kaynaklı.</p>
+        </a>
+        <a class="articleCard reveal" href="makale/sut-hummasi-ilk-yardim.html">
+          <span class="articleTag">Acil durum</span>
+          <h3>Süt humması: ilk dakikalarda ne yapmalı?</h3>
+          <p>Belirtiler, sternal yatış ve aspirasyon riski — üniversite ve MSD kaynaklı.</p>
+        </a>
+        <a class="articleCard reveal" href="makale/buzagi-ishali-ors.html">
+          <span class="articleTag">Yavru sağlığı</span>
+          <h3>Buzağı ishalinde su kaybıyla yarış: ağızdan sıvı</h3>
+          <p>Su kaybını önleyen ağızdan sıvı (ORS) ve ne zaman veteriner gerektiği.</p>
+        </a>
+      </div>
+      <p class="note center"><a href="makale/index.html">Tüm rehberleri gör →</a></p>
+    </div>
+  </section>
+
+  <!-- ============== PLANS ============== -->
+  <section class="section alt" id="planlar">
+    <div class="wrap">
+      <div class="sectionHead center reveal">
+        <span class="kicker">Planlar</span>
+        <h2>Ücretsiz başla, kapasiteni büyüt</h2>
+        <p>Ücretsiz kullanım 15 hayvana kadar. Planlar Google Play üzerinden yıllık abonelik olarak yönetilir; güncel fiyat Play ödeme ekranında görünür.</p>
       </div>
       <div class="pricing">
-        <article class="priceCard"><div class="priceName">Ücretsiz</div><div class="priceCap">15</div><p>Başlangıç için ücretsiz hayvan kapasitesi.</p><div class="priceMeta">Ödeme gerekmez.</div></article>
-        <article class="priceCard featured"><div class="priceName">Başlangıç</div><div class="priceCap">50</div><p>Küçük sürüler için yıllık kapasite planı.</p><div class="priceMeta">Google Play üzerinden.</div></article>
-        <article class="priceCard"><div class="priceName">Küçük Çiftlik</div><div class="priceCap">150</div><p>Büyüyen işletmeler için daha geniş kapasite.</p><div class="priceMeta">Google Play üzerinden.</div></article>
-        <article class="priceCard"><div class="priceName">Orta Çiftlik</div><div class="priceCap">350</div><p>Daha yoğun kayıt tutan işletmeler için.</p><div class="priceMeta">Google Play üzerinden.</div></article>
-        <article class="priceCard"><div class="priceName">Büyük Çiftlik</div><div class="priceCap">700</div><p>Büyük sürüler için en yüksek public kapasite.</p><div class="priceMeta">Google Play üzerinden.</div></article>
+        <article class="priceCard reveal"><div class="priceName">Ücretsiz</div><div class="priceCap">15</div><div class="priceUnit">hayvan</div><p>Başlamak için ücretsiz kapasite.</p><div class="priceMeta">Ödeme gerekmez</div></article>
+        <article class="priceCard reveal"><div class="priceName">Başlangıç</div><div class="priceCap">50</div><div class="priceUnit">hayvan</div><p>Küçük sürüler için yıllık plan.</p><div class="priceMeta">Google Play</div></article>
+        <article class="priceCard featured reveal"><div class="ribbon">Popüler</div><div class="priceName">Küçük Çiftlik</div><div class="priceCap">150</div><div class="priceUnit">hayvan</div><p>Büyüyen işletmeler için geniş kapasite.</p><div class="priceMeta">Google Play</div></article>
+        <article class="priceCard reveal"><div class="priceName">Orta Çiftlik</div><div class="priceCap">350</div><div class="priceUnit">hayvan</div><p>Yoğun kayıt tutan işletmeler için.</p><div class="priceMeta">Google Play</div></article>
+        <article class="priceCard reveal"><div class="priceName">Büyük Çiftlik</div><div class="priceCap">700</div><div class="priceUnit">hayvan</div><p>Büyük sürüler için en yüksek kapasite.</p><div class="priceMeta">Google Play</div></article>
       </div>
-      <p class="note">Limitsiz test/promo hakları public plan gibi pazarlanmaz. İade ve abonelik işlemleri Google Play politikalarına bağlıdır. Detay için <a href="terms.html">abonelik ve kullanım şartları</a>.</p>
+      <p class="note center">İade ve abonelik işlemleri Google Play politikalarına bağlıdır. Detay için <a href="terms.html">abonelik ve kullanım şartları</a>.</p>
     </div>
   </section>
 
+  <!-- ============== FAQ ============== -->
   <section class="section" id="sss">
-    <div class="wrap">
-      <div class="sectionHead"><h2>Sık sorulan sorular</h2><p>Kısa ve net cevaplar.</p></div>
-      <div class="faqGrid">
-        <article class="faqItem"><h3>Verilerim nerede saklanır?</h3><p>Hayvan kayıtları varsayılan olarak cihazında tutulur. Geliştirici sunucusunda hayvan kayıt sistemi kurulmamıştır.</p></article>
-        <article class="faqItem"><h3>İnternet olmadan kullanabilir miyim?</h3><p>Temel kayıt ve takip akışları internet olmadan kullanılabilir. Drive yedekleme, Google Play abonelikleri ve teknik servisler internet gerektirir.</p></article>
-        <article class="faqItem"><h3>Google Drive zorunlu mu?</h3><p>Hayır. Drive yedekleme isteğe bağlıdır. Kullanırsan Google hesabın ve Google servisleri devreye girer.</p></article>
-        <article class="faqItem"><h3>Aboneliği nereden iptal ederim?</h3><p>Abonelikler Google Play hesabın üzerinden yönetilir. Güncel ödeme ve yenileme bilgisi Google Play ekranında gösterilir.</p></article>
-        <article class="faqItem"><h3>Küpe okuma kesin sonuç verir mi?</h3><p>Kamera destekli okuma yardımcı akıştır. Işık, açı ve görüntü kalitesi sonucu etkileyebilir; kritik kayıtta kullanıcı kontrolü önemlidir.</p></article>
-        <article class="faqItem"><h3>Yedek almadan uygulamayı silersem ne olur?</h3><p>Uygulama kaldırıldığında cihazdaki uygulama verileri kaybolabilir. Büyük işlem öncesi güncel yedeği saklamak en güvenli yoldur.</p></article>
+    <div class="wrap narrow">
+      <div class="sectionHead center reveal">
+        <span class="kicker">SSS</span>
+        <h2>Sık sorulan sorular</h2>
       </div>
+      <div class="faq reveal">
+        <details class="faqItem"><summary>CAL veteriner mi?</summary><div class="faqBody"><p>Hayır. CAL veteriner değildir ve onun yerini tutmaz; teşhis koymaz, ilaç ve doz vermez. İşi erken fark etmek, ilk kontrolü söylemek ve seni vakit kaybetmeden veterinere yönlendirmektir.</p></div></details>
+        <details class="faqItem"><summary>Verilerim nerede saklanır?</summary><div class="faqBody"><p>Hayvan kayıtların varsayılan olarak telefonunda, uygulamanın veritabanında tutulur. Geliştirici sunucusunda hayvan kayıt sistemi yoktur. Verilerin satılmaz.</p></div></details>
+        <details class="faqItem"><summary>İnternet olmadan kullanabilir miyim?</summary><div class="faqBody"><p>Evet. Kayıt, takip ve CAL'ın özetleri internetsiz çalışır. Yalnızca canlı hava, Drive yedekleme ve Play abonelikleri internet gerektirir.</p></div></details>
+        <details class="faqItem"><summary>CAL bilgileri nereden alıyor?</summary><div class="faqBody"><p>Sürünle ilgili her sayı senin kendi kayıtlarından gelir. Genel bilgiler (ırk, bakım, hastalık tanımları) Tarım ve Orman Bakanlığı yayınları ile üniversite kaynaklarına dayanır. CAL veri uydurmaz.</p></div></details>
+        <details class="faqItem"><summary>Aboneliği nereden iptal ederim?</summary><div class="faqBody"><p>Abonelikler Google Play hesabın üzerinden yönetilir. Güncel ödeme ve yenileme bilgisi Google Play ekranında gösterilir.</p></div></details>
+        <details class="faqItem"><summary>Yedek almadan uygulamayı silersem ne olur?</summary><div class="faqBody"><p>Uygulama kaldırıldığında cihazdaki veriler kaybolabilir. Büyük işlem öncesi güncel yedeği saklamak en güvenli yoldur.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA ============== -->
+  <section class="ctaBand">
+    <div class="wrap ctaInner reveal">
+      <h2>CAL'ı bugün yanına al.</h2>
+      <p>15 hayvana kadar ücretsiz. Kurulum bir dakika; gerisini CAL hatırlatır.</p>
+      <a class="pill primary lg" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play’den indir</a>
     </div>
   </section>
 </main>
 
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Ekran görüntüsü galerisi">
-  <button class="lbClose" id="lbClose" type="button" aria-label="Galeriyi kapat">×</button>
-  <button class="lbPrev" id="lbPrev" type="button" aria-label="Önceki ekran">‹</button>
+  <button class="lbClose" id="lbClose" type="button" aria-label="Kapat">×</button>
+  <button class="lbNav lbPrev" id="lbPrev" type="button" aria-label="Önceki">‹</button>
   <img id="lightboxImg" alt=""/>
-  <button class="lbNext" id="lbNext" type="button" aria-label="Sonraki ekran">›</button>
+  <button class="lbNav lbNext" id="lbNext" type="button" aria-label="Sonraki">›</button>
 </div>
 
 <footer class="footer">
   <div class="wrap footerGrid">
-    <div>© 2026 Çiftlik Ajandası. Sade, güvenilir sürü takibi.</div>
+    <div class="footerBrand">
+      <img src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/>
+      <div>
+        <strong>Çiftlik Ajandası</strong>
+        <span>CAL ile sade, güvenilir sürü yönetimi.</span>
+      </div>
+    </div>
     <div class="footerLinks">
       <a href="privacy.html">Gizlilik</a>
       <a href="terms.html">Abonelik Şartları</a>
@@ -243,7 +435,9 @@
       <a href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
+  <div class="wrap footerBase">© 2026 Çiftlik Ajandası · Tüm hakları saklıdır.</div>
 </footer>
-<script src="assets/js/main.js" defer></script>
+
+<script src="assets/js/app.js" defer></script>
 </body>
 </html>

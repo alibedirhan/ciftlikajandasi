@@ -14,22 +14,74 @@
   <meta property="og:url" content="https://alibedirhan.github.io/ciftlikajandasi/beta.html"/>
   <meta property="og:image" content="https://alibedirhan.github.io/ciftlikajandasi/assets/img/og-image-v2.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/app.css"/>
 </head>
 <body>
-<a class="skip" href="#main">İçeriğe atla</a>
-<header class="topbar"><div class="wrap topbarInner"><a class="brand" href="./"><img class="brandIcon" src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/><div><div class="brandName">Çiftlik Ajandası</div><div class="brandTag">Test programı.</div></div></a><nav class="nav" aria-label="Ana menü"><a class="navLink" href="index.html">Ana sayfa</a><a class="navLink" href="privacy.html">Gizlilik</a><a class="navLink" href="support.html">Destek</a><a class="navLink" href="terms.html">Şartlar</a></nav><div class="actions"><button class="iconBtn" id="themeBtn" type="button" aria-label="Tema değiştir">☾</button><a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play</a></div></div></header>
+<header class="articleTop">
+  <div class="wrap articleTopInner">
+    <a class="backLink" href="index.html">‹ Çiftlik Ajandası</a>
+    <div class="actions" style="margin-left:auto">
+      <button class="iconBtn" id="themeBtn" type="button" aria-label="Temayı değiştir"><span class="themeGlyph">☾</span></button>
+      <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play</a>
+    </div>
+  </div>
+</header>
 
-<main id="main">
-  <section class="pageHero"><div class="wrap"><div class="badgeRow"><span class="badge">İkincil sayfa</span><span class="badge">Test geri bildirimi</span></div><h1>Test Programı</h1><p class="lead">Bu sayfa, yeni özellikleri denemek veya geri bildirim vermek isteyen kullanıcılar içindir. Normal indirme ve abonelik işlemleri Google Play üzerinden yürür.</p></div></section>
-  <section class="section"><div class="wrap pageGrid"><aside class="sideNav"><a href="#form">Başvuru formu</a><a href="#veri">Gönderilen bilgiler</a><a href="#play">Production sürüm</a></aside><div class="contentStack">
-    <section class="policyBlock" id="play"><h2>Production sürüm</h2><p>Uygulamayı kullanmak için ana yol Google Play sayfasıdır. Test programı yalnızca geri bildirim ve deneme süreci içindir.</p><p><a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play’den aç</a></p></section>
-    <section class="policyBlock" id="form"><h2>Test programı talebi</h2><p class="note">Form sunucuya otomatik gönderim yapacak şekilde bağlı değilse mail uygulaman açılır; gönder tuşuna sen basarsın.</p><form id="betaForm" class="formGrid" novalidate><label>Adın <input id="name" name="name" autocomplete="name" placeholder="Adın"/></label><label>E-posta <input id="email" name="email" autocomplete="email" inputmode="email" placeholder="ornek@mail.com" required/></label><label>Telefon modeli <input id="device" name="device" placeholder="Örn. Samsung A34"/></label><label>Android sürümü <input id="android" name="android" placeholder="Örn. Android 14"/></label><label>Not <textarea id="note" name="note" placeholder="Neyi test etmek istiyorsun veya hangi sorunu yaşadın?"></textarea></label><label><span><input id="consent" type="checkbox"/> Bu bilgilerin test programı ve destek amacıyla kullanılmasını kabul ediyorum.</span></label><div id="betaFormError" aria-live="polite"></div><button class="pill primary" type="submit">Mail taslağı oluştur</button></form></section>
-    <section class="policyBlock" id="veri"><h2>Gönderilen bilgiler nasıl kullanılır?</h2><p>Formdaki e-posta, cihaz modeli, Android sürümü ve not alanı yalnızca test programı iletişimi ve destek amacıyla kullanılır. Bu bilgiler hayvan kayıtlarınla eşleştirilmek veya reklam profili oluşturmak için kullanılmaz.</p><p>Detay için <a href="privacy.html">Gizlilik Politikası</a>.</p></section>
-  </div></div></section>
+<main class="articleWrap">
+  <article class="article">
+    <div class="badgeRow"><span class="badge">İkincil sayfa</span><span class="badge">Test geri bildirimi</span></div>
+    <h1>Test Programı</h1>
+    <p class="articleLead">Bu sayfa, yeni özellikleri denemek veya geri bildirim vermek isteyen kullanıcılar içindir. Normal indirme ve abonelik işlemleri Google Play üzerinden yürür.</p>
+
+    <h2>Production sürüm</h2>
+    <p>Uygulamayı kullanmak için ana yol Google Play sayfasıdır. Test programı yalnızca geri bildirim ve deneme süreci içindir.</p>
+    <p><a class="pill primary" href="https://play.google.com/store/apps/details?id=com.alibedirhan.ciftlik_ajandasi" target="_blank" rel="noopener">Google Play'den aç</a></p>
+
+    <h2>Test programı talebi</h2>
+    <p class="note">Form sunucuya otomatik gönderim yapacak şekilde bağlı değilse mail uygulaman açılır; gönder tuşuna sen basarsın.</p>
+    <form id="betaForm" class="formGrid" novalidate>
+      <label>Adın <input id="name" name="name" autocomplete="name" placeholder="Adın"/></label>
+      <label>E-posta <input id="email" name="email" autocomplete="email" inputmode="email" placeholder="ornek@mail.com" required/></label>
+      <label>Telefon modeli <input id="device" name="device" placeholder="Örn. Samsung A34"/></label>
+      <label>Android sürümü <input id="android" name="android" placeholder="Örn. Android 14"/></label>
+      <label>Not <textarea id="note" name="note" placeholder="Neyi test etmek istiyorsun veya hangi sorunu yaşadın?"></textarea></label>
+      <label><span><input id="consent" type="checkbox"/> Bu bilgilerin test programı ve destek amacıyla kullanılmasını kabul ediyorum.</span></label>
+      <div id="betaFormError" aria-live="polite"></div>
+      <button class="pill primary" type="submit">Mail taslağı oluştur</button>
+    </form>
+
+    <h2>Gönderilen bilgiler nasıl kullanılır?</h2>
+    <p>Formdaki e-posta, cihaz modeli, Android sürümü ve not alanı yalnızca test programı iletişimi ve destek amacıyla kullanılır. Bu bilgiler hayvan kayıtlarınla eşleştirilmek veya reklam profili oluşturmak için kullanılmaz.</p>
+    <p>Detay için <a href="privacy.html">Gizlilik Politikası</a>.</p>
+  </article>
 </main>
+
 <div class="toast" id="toast" aria-hidden="true"></div>
-<footer class="footer"><div class="wrap footerGrid"><div>© 2026 Çiftlik Ajandası</div><div class="footerLinks"><a href="index.html">Ana sayfa</a><a href="privacy.html">Gizlilik</a><a href="support.html">Destek</a></div></div></footer>
-<script src="assets/js/main.js" defer></script><script src="assets/js/beta.js" defer></script>
+
+<footer class="footer">
+  <div class="wrap footerGrid">
+    <div class="footerBrand">
+      <img src="assets/img/app_icon_v2.png" alt="" aria-hidden="true"/>
+      <div>
+        <strong>Çiftlik Ajandası</strong>
+        <span>CAL ile sade, güvenilir sürü yönetimi.</span>
+      </div>
+    </div>
+    <div class="footerLinks">
+      <a href="privacy.html">Gizlilik</a>
+      <a href="terms.html">Abonelik Şartları</a>
+      <a href="support.html">Destek</a>
+      <a href="beta.html">Test Programı</a>
+      <a href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="wrap footerBase">© 2026 Çiftlik Ajandası · Tüm hakları saklıdır.</div>
+</footer>
+
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/beta.js" defer></script>
 </body>
 </html>
