@@ -32,7 +32,7 @@
 
 <main class="articleWrap">
   <article class="article">
-    <div class="badgeRow"><span class="badge">Son güncelleme: 12 Haziran 2026</span><span class="badge">Uygulama: Çiftlik Ajandası</span></div>
+    <div class="badgeRow"><span class="badge">Son güncelleme: 30 Haziran 2026</span><span class="badge">Uygulama: Çiftlik Ajandası</span></div>
     <h1>Gizlilik Politikası</h1>
     <p class="articleLead">Bu sayfa Çiftlik Ajandası Android uygulamasında hangi verilerin cihazda tutulduğunu, hangi işlemlerde Google servislerinin devreye girdiğini, teknik tanılama verilerinin ne amaçla kullanılabileceğini ve isteğe bağlı anonim CAL veri paylaşımının nasıl çalıştığını açıklar.</p>
 
@@ -75,7 +75,7 @@
     <p>Örnek teknik bağlamlar: uygulama sürümü, cihaz segmenti, RAM/depolama aralığı, hayvan sayısı aralığı, premium durumu ve yedek durumu. Bunlar mümkün olduğunca ham kişisel içerik yerine aralık/bucket mantığıyla ele alınır.</p>
 
     <h2 id="cal-paylasim">7. İsteğe bağlı anonim CAL veri paylaşımı (açık rızaya bağlı)</h2>
-    <p>Uygulama içindeki CAL asistanını geliştirmek için, <strong>yalnızca kullanıcı açıkça izin verirse</strong> çalışan isteğe bağlı bir veri paylaşımı vardır. Bu özellik <strong>varsayılan olarak kapalıdır</strong>; kapalı tutmak hiçbir özelliği veya deneme hakkını kısıtlamaz. Açma/kapama anahtarı uygulama içinde <strong>Ayarlar &gt; Gizlilik &amp; İzinler</strong> ekranındadır. Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında aydınlatma metni niteliğindedir; veri sorumlusu, İletişim bölümündeki adresten ulaşılabilen uygulama geliştiricisidir.</p>
+    <p>Uygulama içindeki CAL asistanını geliştirmek için, CAL'a sorulan sorular ve verilen cevaplardan oluşan bir veri paylaşımı vardır. CAL'ı ilk kez açtığınızda bu paylaşımı açıklayan <strong>tek seferlik bir bilgilendirme</strong> gösterilir; <strong>"Anladım" diyerek CAL'ı kullanmaya başlamanız bu paylaşıma KVKK kapsamında açık rıza anlamına gelir</strong> ve paylaşım bu andan itibaren <strong>varsayılan olarak açıktır</strong>. İstediğiniz an uygulama içinde <strong>Ayarlar &gt; Gizlilik &amp; İzinler</strong> ekranından kapatabilirsiniz; kapatmak hiçbir özelliği veya deneme hakkını kısıtlamaz. <strong>CAL'ı hiç kullanmazsanız bu paylaşım da gerçekleşmez.</strong> Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında aydınlatma metni niteliğindedir; veri sorumlusu, İletişim bölümündeki adresten ulaşılabilen uygulama geliştiricisidir.</p>
     <div class="tableWrap">
       <table>
         <thead><tr><th>Paylaşım açıksa toplananlar</th><th>Hiçbir zaman toplanmayanlar</th></tr></thead>
@@ -89,10 +89,10 @@
     </div>
     <p><strong>Önemli:</strong> Soru metninin kendisi (örneğin hayvanlara verilen adlar geçebilir) bu paylaşımın amacıdır ve maskelenmeden iletilir. Sorulara kişisel bilgi yazılmaması önerilir. Rastgele kurulum kodu kimlik tanımlamaz; yalnızca aynı cihazdan gelen soruları gruplamaya yarar.</p>
     <p><strong>Amaç ve hukuki sebep:</strong> Veriler yalnızca CAL'ın soru anlama ve cevap kalitesini geliştirmek amacıyla, KVKK m.5/1 uyarınca açık rızaya dayanarak işlenir. Üçüncü taraflara satılmaz, paylaşılmaz, reklam amacıyla kullanılmaz.</p>
-    <p><strong>Aktarım ve saklama:</strong> Veriler Google Firebase (Firestore) altyapısında saklanır; Google'ın sunucuları yurt dışında bulunabilir. Özelliği açmak, verilerin bu altyapıya aktarılmasına KVKK m.9 kapsamında açık rıza anlamına gelir. Ham veriye yalnızca geliştirici erişir; veriler geliştirme amacı için gerekli olduğu sürece saklanır ve amaç ortadan kalktığında silinir.</p>
+    <p><strong>Aktarım ve saklama:</strong> Veriler Google Firebase (Firestore) altyapısında saklanır; Google'ın sunucuları yurt dışında bulunabilir. CAL'a ilk girişteki bilgilendirmeyi onaylayıp CAL'ı kullanmak, verilerin bu altyapıya aktarılmasına KVKK m.9 kapsamında açık rıza anlamına gelir. Ham veriye yalnızca geliştirici erişir; veriler geliştirme amacı için gerekli olduğu sürece saklanır ve amaç ortadan kalktığında silinir.</p>
     <p><strong>Rızayı geri çekme:</strong> Ayarlar &gt; Gizlilik &amp; İzinler ekranından anahtarı kapatmak yeterlidir. Kapatıldığı anda toplama durur ve cihazda gönderilmeyi bekleyen veriler silinir. Daha önce iletilmiş verilerin silinmesi, aynı ekranda görünen kurulum kodu belirtilerek e-posta ile talep edilebilir.</p>
     <p><strong>KVKK m.11 hakları:</strong> Kişisel verilerin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme gibi haklar için İletişim bölümündeki e-posta adresi kullanılabilir.</p>
-    <p><strong>Rıza vermeseniz de toplanan metin içermeyen ölçümler:</strong> Bu paylaşımı açmasanız bile, CAL'ın geliştirilmesi için <em>yazdığınız metni içermeyen</em> anonim kullanım ölçümleri toplanabilir: sorunun çözüldüğü konu başlığı, cevabın başarılı olup olmadığı, kayıt önerisinin onaylanıp onaylanmadığı, sorunun sesle mi yazıyla mı geldiği, uygulama sürümü ve paket kademesi. Yazdığınız sorular, hayvan adlarınız ve kayıt içerikleriniz bu ölçümlere hiçbir zaman dahil edilmez. Bu ölçümler 6. bölümdeki teknik tanılama verileriyle aynı sınıftadır.</p>
+    <p><strong>Paylaşımı kapattığınızda toplanan metin içermeyen ölçümler:</strong> Bu paylaşımı Ayarlar'dan kapatsanız bile, CAL'ın geliştirilmesi için <em>yazdığınız metni içermeyen</em> anonim kullanım ölçümleri toplanabilir: sorunun çözüldüğü konu başlığı, cevabın başarılı olup olmadığı, kayıt önerisinin onaylanıp onaylanmadığı, sorunun sesle mi yazıyla mı geldiği, uygulama sürümü ve paket kademesi. Yazdığınız sorular, hayvan adlarınız ve kayıt içerikleriniz bu ölçümlere hiçbir zaman dahil edilmez. Bu ölçümler 6. bölümdeki teknik tanılama verileriyle aynı sınıftadır.</p>
 
     <h2>8. Toplanmaması hedeflenen içerikler</h2>
     <ul>
