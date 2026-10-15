@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Gizlilik Politikası — Çiftlik Ajandası</title>
-  <meta name="description" content="Çiftlik Ajandası gizlilik politikası: cihazda saklanan kayıtlar, kullanıcı kontrollü yedekleme, Google Drive, Google Play satın alma, Firebase teknik tanılama ve isteğe bağlı anonim CAL veri paylaşımı açıklamaları."/>
+  <meta name="description" content="Çiftlik Ajandası gizlilik politikası: cihazda saklanan kayıtlar, kullanıcı kontrollü yedekleme, Google Drive, Google Play satın alma, Firebase teknik tanılama ve isteğe bağlı anonim CAL veri paylaşımı, günlük anonim çiftlik özeti ve hava durumu servisi açıklamaları."/>
   <link rel="canonical" href="https://alibedirhan.github.io/ciftlikajandasi/privacy.html"/>
   <meta name="theme-color" content="#0f5b2b"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"/>
@@ -32,7 +32,7 @@
 
 <main class="articleWrap">
   <article class="article">
-    <div class="badgeRow"><span class="badge">Son güncelleme: 30 Haziran 2026</span><span class="badge">Uygulama: Çiftlik Ajandası</span></div>
+    <div class="badgeRow"><span class="badge">Son güncelleme: 15 Ekim 2026</span><span class="badge">Uygulama: Çiftlik Ajandası</span></div>
     <h1>Gizlilik Politikası</h1>
     <p class="articleLead">Bu sayfa Çiftlik Ajandası Android uygulamasında hangi verilerin cihazda tutulduğunu, hangi işlemlerde Google servislerinin devreye girdiğini, teknik tanılama verilerinin ne amaçla kullanılabileceğini ve isteğe bağlı anonim CAL veri paylaşımının nasıl çalıştığını açıklar.</p>
 
@@ -73,6 +73,20 @@
       </table>
     </div>
     <p>Örnek teknik bağlamlar: uygulama sürümü, cihaz segmenti, RAM/depolama aralığı, hayvan sayısı aralığı, premium durumu ve yedek durumu. Bunlar mümkün olduğunca ham kişisel içerik yerine aralık/bucket mantığıyla ele alınır.</p>
+    <h3 id="ciftlik-ozeti">Günlük anonim çiftlik özeti</h3>
+    <p>Uygulamayı ve CAL asistanını bölgeye ve sürü yapısına göre geliştirmek için günde en fazla bir kez şu bilgiler Firebase Analytics'e gönderilir:</p>
+    <ul>
+      <li>İşletme bilgilerinde <strong>sizin seçtiğiniz il ve ilçe</strong> (seçmediyseniz "seçilmedi")</li>
+      <li>Türe göre aktif hayvan <strong>sayıları</strong> (büyükbaş, koyun, keçi)</li>
+      <li>Aktif gebelik <strong>sayısı</strong></li>
+      <li>Son 30 günde yapılan aşıların <strong>sayısı</strong> ve aşı <strong>adları</strong> (ör. "Şap")</li>
+      <li>Telefonun marka ve modeli, uygulamanın Google Play'den mi kurulduğu</li>
+    </ul>
+    <p>Bu özet <strong>varsayılan olarak açıktır</strong>; uygulama içinde <strong>Ayarlar &gt; Gizlilik &amp; İzinler &gt; Anonim çiftlik özeti</strong> anahtarından istediğiniz an kapatabilirsiniz. Kapattığınızda özet gönderilmez; kapatmak hiçbir özelliği kısıtlamaz.</p>
+    <p>Ayrıca hayvan aktif listeden çıktığında yalnız <strong>nedeni</strong> (silme, satış, ölüm) ve <strong>türü</strong>; ücretsiz hayvan sınırına ulaşıldığında <strong>sayı ve sınır</strong>; ödeme ekranında vazgeçerseniz verdiğiniz <strong>isteğe bağlı cevap</strong> teknik ölçüm olarak gönderilir.</p>
+    <p><strong>Gönderilmeyenler:</strong> küpe numarası, hayvan adı, not, tek tek kayıt tarihleri, telefonun konumu (koordinat). Örnek (tanıtım) hayvanlar hiçbir sayıya katılmaz.</p>
+    <h3 id="hava">Hava durumu ve sıcak stresi uyarısı</h3>
+    <p>İşletme bilgilerinde il seçerseniz uygulama, hava tahminini almak için o ilin merkez koordinatını (ya da "Konumumu bul" kullandıysanız çiftliğinizin yaklaşık 1 km'ye yuvarlanmış noktasını) ücretsiz hava servisi <strong>Open-Meteo</strong>'ya (open-meteo.com) gönderir. İstekte kimliğinizi belirten başka bir bilgi yoktur. Tahmin, CAL'ın hava yorumları ve ineklerde sıcak stresi uyarısı için kullanılır. Uyarıyı Ayarlar &gt; Bildirimler &gt; "Sıcak stresi uyarısı"ndan kapatabilirsiniz.</p>
 
     <h2 id="cal-paylasim">7. İsteğe bağlı anonim CAL veri paylaşımı (açık rızaya bağlı)</h2>
     <p>Uygulama içindeki CAL asistanını geliştirmek için, CAL'a sorulan sorular ve verilen cevaplardan oluşan bir veri paylaşımı vardır. CAL'ı ilk kez açtığınızda bu paylaşımı açıklayan <strong>tek seferlik bir bilgilendirme</strong> gösterilir; <strong>"Anladım" diyerek CAL'ı kullanmaya başlamanız bu paylaşıma KVKK kapsamında açık rıza anlamına gelir</strong> ve paylaşım bu andan itibaren <strong>varsayılan olarak açıktır</strong>. İstediğiniz an uygulama içinde <strong>Ayarlar &gt; Gizlilik &amp; İzinler</strong> ekranından kapatabilirsiniz; kapatmak hiçbir özelliği veya deneme hakkını kısıtlamaz. <strong>CAL'ı hiç kullanmazsanız bu paylaşım da gerçekleşmez.</strong> Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında aydınlatma metni niteliğindedir; veri sorumlusu, İletişim bölümündeki adresten ulaşılabilen uygulama geliştiricisidir.</p>
@@ -93,6 +107,7 @@
     <p><strong>Rızayı geri çekme:</strong> Ayarlar &gt; Gizlilik &amp; İzinler ekranından anahtarı kapatmak yeterlidir. Kapatıldığı anda toplama durur ve cihazda gönderilmeyi bekleyen veriler silinir. Daha önce iletilmiş verilerin silinmesi, aynı ekranda görünen kurulum kodu belirtilerek e-posta ile talep edilebilir.</p>
     <p><strong>KVKK m.11 hakları:</strong> Kişisel verilerin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme gibi haklar için İletişim bölümündeki e-posta adresi kullanılabilir.</p>
     <p><strong>Paylaşımı kapattığınızda toplanan metin içermeyen ölçümler:</strong> Bu paylaşımı Ayarlar'dan kapatsanız bile, CAL'ın geliştirilmesi için <em>yazdığınız metni içermeyen</em> anonim kullanım ölçümleri toplanabilir: sorunun çözüldüğü konu başlığı, cevabın başarılı olup olmadığı, kayıt önerisinin onaylanıp onaylanmadığı, sorunun sesle mi yazıyla mı geldiği, uygulama sürümü ve paket kademesi. Yazdığınız sorular, hayvan adlarınız ve kayıt içerikleriniz bu ölçümlere hiçbir zaman dahil edilmez. Bu ölçümler 6. bölümdeki teknik tanılama verileriyle aynı sınıftadır.</p>
+    <p>(Yukarıdaki tabloda "konum" CAL veri paylaşımı içindir. İşletmenizin il/ilçesi CAL paylaşımına değil, 6. bölümdeki günlük anonim çiftlik özetine dahildir.)</p>
 
     <h2>8. Toplanmaması hedeflenen içerikler</h2>
     <ul>
@@ -111,7 +126,8 @@
           <tr><td>Kamera</td><td>Fotoğraf veya küpe okuma gibi kullanıcı başlatmalı işlemler.</td></tr>
           <tr><td>Bildirim ve alarm</td><td>Aşı, doğum, gebelik ve ajanda hatırlatmalarının zamanında çalışması.</td></tr>
           <tr><td>Mikrofon</td><td>İsteğe bağlı sesli asistan özelliği; ses cihazda işlenir, kaydedilip gönderilmez.</td></tr>
-          <tr><td>İnternet</td><td>Google Drive yedekleme, Google Play abonelik kontrolü, Firebase teknik servisleri ve isteğe bağlı CAL veri paylaşımı.</td></tr>
+          <tr><td>Yaklaşık konum (isteğe bağlı)</td><td>Yalnız İşletme Bilgileri'nde "Konumumu bul" düğmesine bastığınızda istenir. Telefon konumunuzdan il ve ilçeyi bulur; konumun kendisi <strong>yalnız bu telefonda</strong> saklanır ve bize gönderilmez (hava servisine giden yuvarlanmış nokta için 6. bölüme bakın). İzni vermezseniz il ve ilçeyi listeden seçebilirsiniz.</td></tr>
+          <tr><td>İnternet</td><td>Google Drive yedekleme, Google Play abonelik kontrolü, Firebase teknik servisleri, isteğe bağlı CAL veri paylaşımı ve hava tahmini (Open-Meteo).</td></tr>
           <tr><td>Dosya seçici / depolama erişimi</td><td>Kullanıcının yedek dosyası seçmesi, kaydetmesi veya geri yüklemesi.</td></tr>
           <tr><td>Ön plan veri eşitleme servisi</td><td>Uzun süren yedekleme ve geri yükleme işlemlerinin daha güvenilir tamamlanması.</td></tr>
         </tbody>
@@ -129,7 +145,7 @@
     <p>Uygulama, veri kaybını azaltmak için yedekleme ve geri yükleme akışlarında kontrollü davranmayı hedefler. Buna rağmen telefon arızası, yanlış dosya seçimi, uygulama kaldırma veya kullanıcı tarafından yedek silme gibi durumlarda güncel yedek saklamak kritik önemdedir.</p>
 
     <h2>13. Politika değişiklikleri</h2>
-    <p>Uygulama özellikleri, Google Play gereklilikleri veya kullanılan teknik servisler değişirse bu politika güncellenebilir. En güncel sürüm bu sayfada yayınlanır. Veri toplamayı genişleten bir değişiklik, uygulama içinde yeniden rıza alınmadan yürürlüğe konmaz.</p>
+    <p>Uygulama özellikleri, Google Play gereklilikleri veya kullanılan teknik servisler değişirse bu politika güncellenebilir. En güncel sürüm bu sayfada yayınlanır. Veri toplamayı genişleten bir değişiklik, yürürlüğe girmeden önce bu sayfada açıklanır; isteğe bağlı her paylaşım uygulama içinde Ayarlar &gt; Gizlilik &amp; İzinler ekranından kapatılabilir.</p>
 
     <h2 id="iletisim">14. İletişim</h2>
     <p>Gizlilik, yedekleme, abonelik veya destek konuları için <a href="mailto:ciftlikajandasi@gmail.com">ciftlikajandasi@gmail.com</a> adresine yazabilirsin. Instagram destek hesabı: <a href="https://www.instagram.com/ciftlikajandasi_surutakip/" target="_blank" rel="noopener">@ciftlikajandasi_surutakip</a>.</p>

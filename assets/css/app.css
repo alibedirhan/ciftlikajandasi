@@ -402,6 +402,7 @@ a{color:inherit;text-decoration:none}
 .articleMeta::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--leaf)}
 .articleLead{font-size:1.12rem;color:var(--ink);line-height:1.7;margin-bottom:28px;font-weight:500}
 .article h2{font-size:1.35rem;margin:32px 0 12px}
+.article h3{margin:24px 0 10px}
 .article p{margin-bottom:14px;font-size:1.04rem;line-height:1.75;color:var(--body)}
 .article ul{margin:0 0 18px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
 .article ul li{position:relative;padding-left:26px;color:var(--body);line-height:1.65}
